@@ -1,5 +1,6 @@
-﻿namespace DefaultNamespace;
+﻿using ShopMaMonolitic.Data.Core;
 
+namespace ShopMaMonolitic.Data.Entities;
 public class SalesOrders : BaseEntity
 {
     public DateTime orderDate { get; set; }
