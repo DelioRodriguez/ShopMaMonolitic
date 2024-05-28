@@ -13,9 +13,9 @@ public class SalesCustomers : BaseEntity
     public string country { set; get; }
     public string phone { set; get; }
     public string fax { set; get; }
-}
-public SalesCustomers(int orderID, string companyName, string contactTtitle, string addess, string email, string city, string region, string postalCode, string country, string phone, string fax) : base (orderID) 
-	{
+
+    public SalesCustomers()
+    {
         
-	}
+    }
 }
