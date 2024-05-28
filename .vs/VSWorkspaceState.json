@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ShopMaMonolitic",
+    "\\ShopMaMonolitic\\BL",
+    "\\ShopMaMonolitic\\BL\\Exceptions",
+    "\\ShopMaMonolitic\\BL\\Interfaces",
+    "\\ShopMaMonolitic\\BL\\Services",
+    "\\ShopMaMonolitic\\Data\\Context",
+    "\\ShopMaMonolitic\\Data\\Core",
+    "\\ShopMaMonolitic\\Data\\Entities",
+    "\\ShopMaMonolitic\\Data\\Exceptions"
+  ],
+  "PreviewInSolutionExplorer": false
+}
