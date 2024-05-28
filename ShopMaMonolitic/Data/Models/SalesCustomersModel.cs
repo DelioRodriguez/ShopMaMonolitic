@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace;
+﻿namespace ShopMaMonolitic.Data.Models;
 
 public class SalesCustomersModel
 {

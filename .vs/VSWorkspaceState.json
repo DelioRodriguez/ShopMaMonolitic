@@ -3,13 +3,14 @@
     "",
     "\\ShopMaMonolitic",
     "\\ShopMaMonolitic\\BL",
-    "\\ShopMaMonolitic\\BL\\Exceptions",
     "\\ShopMaMonolitic\\BL\\Interfaces",
     "\\ShopMaMonolitic\\BL\\Services",
-    "\\ShopMaMonolitic\\Data\\Context",
-    "\\ShopMaMonolitic\\Data\\Core",
+    "\\ShopMaMonolitic\\Data",
     "\\ShopMaMonolitic\\Data\\Entities",
-    "\\ShopMaMonolitic\\Data\\Exceptions"
+    "\\ShopMaMonolitic\\Data\\Exceptions",
+    "\\ShopMaMonolitic\\Data\\Interfaces",
+    "\\ShopMaMonolitic\\Data\\Models"
   ],
+  "SelectedNode": "\\ShopMaMonolitic\\Data\\Interfaces\\ISalesOrderDetailsDb.cs",
   "PreviewInSolutionExplorer": false
 }
