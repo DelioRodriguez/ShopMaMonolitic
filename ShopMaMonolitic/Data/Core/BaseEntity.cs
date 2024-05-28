@@ -17,9 +17,9 @@ public abstract class BaseEntity
     
     public int productID { set; get; }
 
-    
+
     public int orderID { set; get; }
-    public int custID { set; get; }
+    public int? custID { set; get; }
     public int shipperID { set; get; }
-    
+    public int empid { set; get; }
 }
