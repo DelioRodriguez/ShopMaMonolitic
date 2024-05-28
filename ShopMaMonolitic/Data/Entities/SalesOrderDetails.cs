@@ -1,5 +1,6 @@
-﻿namespace ShopMaMonolitic.Data.Core;
+﻿using ShopMaMonolitic.Data.Core;
 
+namespace ShopMaMonolitic.Data.Entities;
 public class SalesOrderDetails : BaseEntity
 {
     public int qty { get; set; }
