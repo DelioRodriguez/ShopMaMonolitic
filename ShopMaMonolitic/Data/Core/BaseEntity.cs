@@ -14,4 +14,12 @@ public abstract class BaseEntity
     public int? deleteUser { set; get; }
     public DateTime? deleteDate { set; get; }
     public bool deleted { set; get; }
+    
+    public int productID { set; get; }
+
+    
+    public int orderID { set; get; }
+    public int custID { set; get; }
+    public int shipperID { set; get; }
+    
 }
