@@ -1,6 +1,7 @@
 ﻿using ShopMaMonolitic.Data.Core;
 
 namespace ShopMaMonolitic.Data.Entities;
+
 public class SalesCustomers : BaseEntity
 {
     public string companyName { set; get; }
