@@ -1,6 +1,5 @@
 ﻿namespace ShopMaMonolitic.BL.Dtos;
 
-public record HREmployeeDtoAdd
-{
+public record HREmployeeDtoAdd();
+
     
-}
