@@ -22,4 +22,6 @@ public abstract class BaseEntity
     public int? custID { set; get; }
     public int shipperID { set; get; }
     public int empid { set; get; }
+    
+    public string testId { get; set; }
 }
