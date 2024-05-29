@@ -16,6 +16,8 @@ public abstract class BaseEntity
     public bool deleted { set; get; }
     
     public int productID { set; get; }
+    
+    public string phone { set; get; }
 
 
     public int orderID { set; get; }

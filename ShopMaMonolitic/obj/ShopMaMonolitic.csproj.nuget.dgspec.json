@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ShopMaMonolotic\\ShopMaMonolitic\\ShopMaMonolitic.csproj": {}
+    "C:\\Users\\delio\\OneDrive\\Desktop\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic.csproj": {}
   },
   "projects": {
-    "C:\\ShopMaMonolotic\\ShopMaMonolitic\\ShopMaMonolitic.csproj": {
+    "C:\\Users\\delio\\OneDrive\\Desktop\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ShopMaMonolotic\\ShopMaMonolitic\\ShopMaMonolitic.csproj",
+        "projectUniqueName": "C:\\Users\\delio\\OneDrive\\Desktop\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic.csproj",
         "projectName": "ShopMaMonolitic",
-        "projectPath": "C:\\ShopMaMonolotic\\ShopMaMonolitic\\ShopMaMonolitic.csproj",
+        "projectPath": "C:\\Users\\delio\\OneDrive\\Desktop\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic.csproj",
         "packagesPath": "C:\\Users\\delio\\.nuget\\packages\\",
-        "outputPath": "C:\\ShopMaMonolotic\\ShopMaMonolitic\\obj\\",
+        "outputPath": "C:\\Users\\delio\\OneDrive\\Desktop\\ShopMaMonolitic\\ShopMaMonolitic\\ShopMaMonolitic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
