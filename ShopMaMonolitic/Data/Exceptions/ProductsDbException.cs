@@ -6,5 +6,13 @@ public class ProductsDbException : Exceptions
     {
         
     }
-    
+
+    private void logError(String message)
+    {
+
+    }
+    private void sendError(String message)
+    {
+    }
+
 }

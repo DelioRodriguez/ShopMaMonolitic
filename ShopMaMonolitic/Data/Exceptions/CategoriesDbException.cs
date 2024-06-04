@@ -1,9 +1,16 @@
 ﻿namespace ShopMaMonolitic.Data.Exceptions;
 
-public class CategoriesDbException : Exceptions
+public class CategoriesDbException : Exception
 {
-    public CategoriesServiceException(string message) : base(message)
+    public CategoriesDbException(string message) : base(message)
     {
     
+    }
+    private void logError(String message)
+    {
+
+    }
+    private void sendError(String message)
+    {
     }
 }
