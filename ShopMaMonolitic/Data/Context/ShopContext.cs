@@ -1,4 +1,4 @@
-﻿namespace ShopMaMonolitic.Data.Context;
+﻿ namespace ShopMaMonolitic.Data.Context;
 
 public class ShopContext
 {

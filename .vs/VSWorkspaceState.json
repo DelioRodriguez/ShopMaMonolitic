@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\ShopMaMonolitic",
-    "\\ShopMaMonolitic\\BL",
-    "\\ShopMaMonolitic\\BL\\Interfaces",
-    "\\ShopMaMonolitic\\BL\\Services",
+    "\\ShopMaMonolitic\\Controllers",
     "\\ShopMaMonolitic\\Data",
-    "\\ShopMaMonolitic\\Data\\Entities",
-    "\\ShopMaMonolitic\\Data\\Exceptions",
-    "\\ShopMaMonolitic\\Data\\Interfaces",
-    "\\ShopMaMonolitic\\Data\\Models"
+    "\\ShopMaMonolitic\\Models",
+    "\\ShopMaMonolitic\\obj",
+    "\\ShopMaMonolitic\\Properties",
+    "\\ShopMaMonolitic\\Views",
+    "\\ShopMaMonolitic\\Views\\Home",
+    "\\ShopMaMonolitic\\wwwroot"
   ],
-  "SelectedNode": "\\ShopMaMonolitic\\Data\\Interfaces\\ISalesOrderDetailsDb.cs",
+  "SelectedNode": "\\ShopMaMonolitic\\BL\\Exceptions\\SalesOrdersServicesExeption.cs",
   "PreviewInSolutionExplorer": false
 }

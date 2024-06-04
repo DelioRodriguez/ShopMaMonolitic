@@ -5,6 +5,11 @@
       "taskLabel": "tarea-wwwroot",
       "appliesTo": "ShopMaMonolitic/wwwroot/",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-ShopMaMonolitic",
+      "appliesTo": "ShopMaMonolitic/",
+      "type": "launch"
     }
   ]
 }
