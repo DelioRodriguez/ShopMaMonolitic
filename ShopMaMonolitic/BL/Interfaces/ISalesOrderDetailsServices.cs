@@ -1,6 +1,6 @@
 ﻿namespace ShopMaMonolitic.BL.Interfaces;
 
-public interface SalesOrderDetailsServices
+public interface ISalesOrderDetailsServices
 {
     
 }
