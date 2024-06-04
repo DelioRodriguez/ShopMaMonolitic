@@ -1,4 +1,5 @@
 ﻿using ShopMaMonolitic.Data.Core;
+using System.Data.SqlTypes;
 
 namespace ShopMaMonolitic.Data.Entities;
 
