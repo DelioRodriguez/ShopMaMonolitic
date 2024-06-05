@@ -13,103 +13,95 @@ public class SalesCustumersDb : ISalesCustomersDb
     {
         this.context = context;
     }
-
-    public SalesCustomersModel GetSalesCustomers(int SalesId)
+    private SalesCustomers ValidateCustomerExists(int customerId)
     {
-        var GetsalesCustomers = this.context.SalesCustomers.Find(SalesId);
-
-        SalesCustomersModel salesCustomersModel = new SalesCustomersModel()
+        var customer = this.context.SalesCustomers.Find(customerId);
+        if (customer == null)
         {
-            CompanyName = GetsalesCustomers.CompanyName,
-            ContactName = GetsalesCustomers.ContactName,
-            ContactTitle = GetsalesCustomers.ContactTtitle,
-            Address = GetsalesCustomers.Address,
-            Email = GetsalesCustomers.Email,
-            City = GetsalesCustomers.City,
-            Region = GetsalesCustomers.Region,
-            PostalCode = GetsalesCustomers.PostalCode,
-            Country = GetsalesCustomers.Country,
-            Phone = GetsalesCustomers.Phone,
-            Fax = GetsalesCustomers.Fax
-        };
+            throw new SalesCustomersException("El cliente no esta registrado");
+        }
+        return customer;
+    }
 
-        return salesCustomersModel;
+    private SalesCustomersModel MapToModel(SalesCustomers entity)
+    {
+        return new SalesCustomersModel
+        {
+            CompanyName = entity.CompanyName,
+            ContactName = entity.ContactName,
+            ContactTitle = entity.ContactTtitle,
+            Address = entity.Address,
+            Email = entity.Email,
+            City = entity.City,
+            Region = entity.Region,
+            PostalCode = entity.PostalCode,
+            Country = entity.Country,
+            Phone = entity.Phone,
+            Fax = entity.Fax
+        };
+    }
+
+    private void MapToEntity(SaveSalesCustomersModel model, SalesCustomers entity)
+    {
+        entity.CompanyName = model.CompanyName;
+        entity.ContactName = model.ContactName;
+        entity.ContactTtitle = model.ContactTitle;
+        entity.Address = model.Address;
+        entity.Email = model.Email;
+        entity.City = model.City;
+        entity.Region = model.Region;
+        entity.PostalCode = model.PostalCode;
+        entity.Country = model.Country;
+        entity.Phone = model.Phone;
+        entity.Fax = model.Fax;
+    }
+
+    private void MapToEntity(UpdateSalesCustomersModel model, SalesCustomers entity)
+    {
+        entity.CompanyName = model.CompanyName;
+        entity.ContactName = model.ContactName;
+        entity.ContactTtitle = model.ContactTitle;
+        entity.Address = model.Address;
+        entity.Email = model.Email;
+        entity.City = model.City;
+        entity.Region = model.Region;
+        entity.PostalCode = model.PostalCode;
+        entity.Country = model.Country;
+        entity.Phone = model.Phone;
+        entity.Fax = model.Fax;
     }
 
     public List<SalesCustomersModel> GetSalesCustomers()
     {
-        return this.context.SalesCustomers.Select(ListSalesCustomers => new SalesCustomersModel() 
-        {
-            CompanyName = ListSalesCustomers.CompanyName,
-            ContactName = ListSalesCustomers.ContactName,
-            ContactTitle = ListSalesCustomers.ContactTtitle,
-            Address = ListSalesCustomers.Address,
-            Email = ListSalesCustomers.Email,
-            City = ListSalesCustomers.City,
-            Region = ListSalesCustomers.Region,
-            PostalCode = ListSalesCustomers.PostalCode,
-            Country = ListSalesCustomers.Country,
-            Phone = ListSalesCustomers.Phone,
-            Fax = ListSalesCustomers.Fax
-        }).ToList();
+        return this.context.SalesCustomers.Select(customer => MapToModel(customer)).ToList();
     }
 
-    public void SaveSalesCustomers(SaveSalesCustomersModel saveSalesCustomers)
-    {   
-        SalesCustomers salesCustomers = new SalesCustomers()
-        {
-            CompanyName = saveSalesCustomers.CompanyName,
-            ContactName = saveSalesCustomers.ContactName,
-            ContactTtitle = saveSalesCustomers.ContactTitle,
-            Address = saveSalesCustomers.Address,
-            Email = saveSalesCustomers.Email,
-            City = saveSalesCustomers.City,
-            Region = saveSalesCustomers.Region,
-            PostalCode = saveSalesCustomers.PostalCode,
-            Country = saveSalesCustomers.Country,
-            Phone = saveSalesCustomers.Phone,
-            Fax = saveSalesCustomers.Fax
-        };
-        this.context.SalesCustomers.Add(salesCustomers);
-        this.context.SaveChanges();
-    }
-
-    public void UpdateSalesCustomers(UpdatesalesCustomersModel updatesalesCustomers)
+    public SalesCustomersModel GetSalesCustomers(int SalesId)
     {
-        SalesCustomers salesCustomersToUpdate = this.context.SalesCustomers.Find(updatesalesCustomers.CustId);
-
-        if (salesCustomersToUpdate is null)
-        {
-            throw new SalesCustomersException("El cliente no esta registrado");
-        }
-            salesCustomersToUpdate.CompanyName = updatesalesCustomers.CompanyName;
-            salesCustomersToUpdate.ContactName = updatesalesCustomers.ContactName;
-            salesCustomersToUpdate.ContactTtitle = updatesalesCustomers.ContactTitle;
-            salesCustomersToUpdate.Address = updatesalesCustomers.Address;
-            salesCustomersToUpdate.Email = updatesalesCustomers.Email;
-            salesCustomersToUpdate.City = updatesalesCustomers.City;
-            salesCustomersToUpdate.Region = updatesalesCustomers.Region;
-            salesCustomersToUpdate.PostalCode = updatesalesCustomers.PostalCode;
-            salesCustomersToUpdate.Country = updatesalesCustomers.Country;
-            salesCustomersToUpdate.Phone = updatesalesCustomers.Phone;
-            salesCustomersToUpdate.Fax = updatesalesCustomers.Fax;
-
-        this.context.SalesCustomers.Update(salesCustomersToUpdate);
-        this.context.SaveChanges();
+        var customer = ValidateCustomerExists(SalesId);
+        return MapToModel(customer);
     }
 
     public void RemoveSalesCustomers(RemoveSalesCustomersModel removeSalesCustomers)
     {
-        SalesCustomers salesCustomerToDelete = this.context.SalesCustomers.Find(removeSalesCustomers.CustId);
+        var customer = ValidateCustomerExists(removeSalesCustomers.CustId);
+        this.context.SalesCustomers.Remove(customer);
+        this.context.SaveChanges();
+    }
 
-        if (salesCustomerToDelete is null)
-        {
-            throw new SalesCustomersException("El cliente no esta registrado");
-        }
+    public void SaveSalesCustomers(SaveSalesCustomersModel saveSalesCustomers)
+    {
+        var customer = new SalesCustomers();
+        MapToEntity(saveSalesCustomers, customer);
+        this.context.SalesCustomers.Add(customer);
+        this.context.SaveChanges();
+    }
 
-        salesCustomerToDelete.custId = removeSalesCustomers.CustId;
-
-        this.context.SalesCustomers.Update(salesCustomerToDelete);
+    public void UpdateSalesCustomers(UpdateSalesCustomersModel updatesalesCustomers)
+    {
+        var customer = ValidateCustomerExists(updatesalesCustomers.CustId);
+        MapToEntity(updatesalesCustomers, customer);
+        this.context.SalesCustomers.Update(customer);
         this.context.SaveChanges();
     }
 }
