@@ -3,78 +3,100 @@ using ShopMaMonolitic.Data.Entities;
 using ShopMaMonolitic.Data.Interfaces;
 using ShopMaMonolitic.Data.Models;
 
-namespace ShopMaMonolitic.Data.DbObjetcs;
-
-public class CategoriesDb : ICategoriesDb
+namespace ShopMaMonolitic.Data.DbObjects
 {
-    private readonly ShopContext context;
-
-    public CategoriesDb (ShopContext context)
+    public class CategoriesDb : ICategoriesDb
     {
-        this.context = context;
-    }
+        private readonly ShopContext context;
 
-    public List<CategoriesModel> GetCategories()
-    {
-        return this.context.Categories.Select(cc => new CategoriesModel()
+        public CategoriesDb(ShopContext context)
         {
-            CategoryName = cc.categoryName,
-            Description = cc.description,
-            CreateDate = cc.createDate, 
-            CreaterUser = cc.createUser
-        }).ToList();
-        
-    }
-
-    public CategoriesModel GetCategories(int categorieID)
-    {
-
-        var categories = this.context.Categories.Find(categorieID);
-        if (categories is null)
-        {
-            throw new NotImplementedException("Esta Categoria no se encuentra ");
+            this.context = context;
         }
-        CategoriesModel categoriesModel = new CategoriesModel()
-        {
-            CategoryName = categories.categoryName,
-            Description = categories.description,
-            CreaterUser = categories.createUser,
-            CreateDate = categories.createDate
-        };
 
-        return categoriesModel;
+        public ShopContext Context => context;
+
+        private CategoriesModel MapToModel(Categories category)
+        {
+            return new CategoriesModel
+            {
+                CategoryName = category.categoryName,
+                Description = category.description,
+                CreateDate = category.createDate,
+                CreaterUser = category.createUser
+            };
+        }
+
+        private Categories GetCategoryById(int categoryId)
+        {
+            var category = this.Context.Categories.Find(categoryId);
+            if (category == null)
+            {
+                throw new NotImplementedException("Esta Categoria no se encuentra");
+            }
+            return category;
+        }
+
+        public List<CategoriesModel> GetCategories()
+        {
+            return this.Context.Categories.Select(cc => MapToModel(cc)).ToList();
+        }
+
+        public CategoriesModel GetCategories(int categoryId)
+        {
+            var category = GetCategoryById(categoryId);
+            return MapToModel(category);
+        }
+
+        public void RemoveCategories(CategoriesRemoveModel categoriesRemove)
+        {
+            var categoryToRemove = GetCategoryById(categoriesRemove.CategoryId);
+            UpdateDeletedFields(categoryToRemove, categoriesRemove.Deleted, categoriesRemove.DeleteDate, categoriesRemove.DeleteUser);
+
+            this.Context.Categories.Remove(categoryToRemove);
+            this.Context.SaveChanges();
+        }
+
        
-    }
 
-    public void RemoveCategories(CategoriesRemoveModel categoriesRemove)
-    {
-        var categoryToRemove = this.context.Categories.Find(categoriesRemove.CategoryId);
-        if (categoryToRemove is null)
+        public void SaveCategorie(CategorieAddModel categoriesAdd)
         {
-            throw new NotImplementedException("Esta categoria no se encuentra");
+            var category = new Categories
+            {
+                categoryName = categoriesAdd.CategoryName,
+                description = categoriesAdd.Description,
+                createUser = categoriesAdd.CreatorUser,
+                createDate = categoriesAdd.CreationDate
+            };
+
+            this.Context.Categories.Add(category);
+            this.Context.SaveChanges();
         }
-        categoryToRemove.deleted = categoriesRemove.Deleted;
-        categoryToRemove.deleteDate = categoriesRemove.DeleteDate;
-        categoryToRemove.deleteUser = categoriesRemove.Deleteuser;
 
-        this.context.Categories.Remove(categoryToRemove);
-        this.context.SaveChanges();
-
-
-    }
-
-    public void SaveCategorie(CategorieAddModel categoriesAdd)
-    {
-        Categories Categories = new Categories()
+        public void UpdateCategories(CategoriesUpdateModel categoriesUpdate)
         {
-            categoryName = Categories.categoryName,
-            description = Categories.description,
-        }
-       
-    }
+            var categoryToUpdate = GetCategoryById(categoriesUpdate.CategoryId);
+            UpdateCategoryFields(categoryToUpdate, categoriesUpdate.CategoryName, categoriesUpdate.Description, categoriesUpdate.UpdatedDate, categoriesUpdate.ModifyUser, categoriesUpdate.CreatedDate);
 
-    public void UpdateCategories(CategoriesUpdateModel categoriesUpdate)
-    {
-        throw new NotImplementedException();
+            this.Context.SaveChanges();
+        }
+
+        private void UpdateDeletedFields(Categories category, bool deleted, DateTime deleteDate, int deleteUser)
+        {
+            category.deleted = deleted;
+            category.deleteDate = deleteDate;
+            category.deleteUser = deleteUser;
+        }
+
+        private void UpdateCategoryFields(Categories category, string categoryName, string description, DateTime modifyDate, int modifyUser, DateTime createDate)
+        {
+            
+
+            category.categoryName = categoryName;
+            category.description = description;
+            category.modifyDate = modifyDate;
+            category.modifyUser = modifyUser;
+            category.createDate = createDate;
+        }
     }
 }
