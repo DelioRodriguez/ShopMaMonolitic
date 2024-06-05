@@ -1,0 +1,9 @@
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.csproj.AssemblyReference.cache
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.GeneratedMSBuildEditorConfig.editorconfig
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.AssemblyInfoInputs.cache
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.AssemblyInfo.cs
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.csproj.CoreCompileInputs.cache
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.MvcApplicationPartsAssemblyInfo.cache
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.RazorAssemblyInfo.cache
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.RazorAssemblyInfo.cs
+C:\ShopMaMonolitic\ShopMaMonolitic\obj\Debug\net8.0\ShopMaMonolitic.sourcelink.json
