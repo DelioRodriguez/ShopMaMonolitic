@@ -3,6 +3,7 @@ using ShopMaMonolitic.Data.Entities;
 using ShopMaMonolitic.Data.Exceptions;
 using ShopMaMonolitic.Data.Interfaces;
 using ShopMaMonolitic.Data.Models;
+using System.Net;
 
 namespace ShopMaMonolitic.Data.DbObjetcs;
 
@@ -77,14 +78,37 @@ public class SalesOrdersDb : ISalesOrdersDb
 
     public void UpdateSalesOrdes(UpdateSalesOrdersModels updateSalesOrdersModels)
     {
-        throw new NotImplementedException();
+       SalesOrders salesOrdersToUpdate = this.context.SalesOrders.Find(updateSalesOrdersModels.OrderId);
+
+        if(salesOrdersToUpdate is null) 
+        {
+            throw new SalesOrderExeption("Orden no existente.");
+        }
+        salesOrdersToUpdate.OrderId = updateSalesOrdersModels.OrderId;
+        salesOrdersToUpdate.custId = updateSalesOrdersModels.CustId;
+        salesOrdersToUpdate.empid = updateSalesOrdersModels.EmpId;
+        salesOrdersToUpdate.OrderDate = updateSalesOrdersModels.OrderDate;
+        salesOrdersToUpdate.RequiredDate = updateSalesOrdersModels.RequiredDate;
+        salesOrdersToUpdate.ShippedDate = updateSalesOrdersModels.ShippedDate;
+        salesOrdersToUpdate.shipperId = updateSalesOrdersModels.ShipperId;
+        salesOrdersToUpdate.Freight = updateSalesOrdersModels.Freight;
+        salesOrdersToUpdate.ShipName = updateSalesOrdersModels.ShipName;
+        salesOrdersToUpdate.ShipAddress = updateSalesOrdersModels.ShipAddress;
+        salesOrdersToUpdate.ShipCity = updateSalesOrdersModels.ShipCity;
+        salesOrdersToUpdate.ShipRegion = updateSalesOrdersModels.ShipRegion;
+        salesOrdersToUpdate.ShipPostalCode = updateSalesOrdersModels.ShipPostalCode;
+        salesOrdersToUpdate.ShipCountry = updateSalesOrdersModels.ShipCountry;
+
+        this.context.SalesOrders.Update(salesOrdersToUpdate);
+        this.context.SaveChanges();
     }
+
     public void RemoveSalesOrders(RemoveSalesOrdersModel removeSalesOrdersModel)
     {
         SalesOrders salesOrdersToDelete = this.context.SalesOrders.Find(removeSalesOrdersModel.OrderId);
         if(salesOrdersToDelete is null)
         {
-            throw new SalesOrderExeption("Venta no registrada");
+            throw new SalesOrderExeption("Orden no existente.");
         }
         salesOrdersToDelete.OrderId = removeSalesOrdersModel.OrderId;
 

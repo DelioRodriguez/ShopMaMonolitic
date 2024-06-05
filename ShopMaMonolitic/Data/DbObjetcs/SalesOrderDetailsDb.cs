@@ -14,11 +14,6 @@ public class SalesOrderDetailsDb : ISalesOrderDetailsDb
         this.context = context;
     }
 
-    public void DeleteSalesOrderDetails()
-    {
-        throw new NotImplementedException();
-    }
-
     public SalesOrderDetailsModel GetSalesOrderDetails(int orderId)
     {
         var GetSalesOrderDetails = this.context.SalesOrderDetails.Find(orderId);
@@ -81,7 +76,7 @@ public class SalesOrderDetailsDb : ISalesOrderDetailsDb
 
         if (salesOrderDetailsToDelete is null)
         {
-            throw new SalesCustomersException("La orden existe");
+            throw new SalesCustomersException("Orden no existente.");
         }
         salesOrderDetailsToDelete.orderId = removeSalesOrderDetails.OrderID;
 
