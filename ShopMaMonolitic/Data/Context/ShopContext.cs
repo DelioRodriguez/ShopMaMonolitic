@@ -11,9 +11,17 @@ namespace ShopMaMonolitic.Data.Context
         {
         }
         #endregion
-        #region"SalesCustomers Dbsets"
+
+        #region"SalesCustomers DbSt"
         public DbSet<SalesCustomers> SalesCustomers { get; set; }
-        //Hacer los otros de segun mi rama.
+        #endregion
+
+        #region"SalesOrders DbSet"
+        public DbSet<SalesOrders> SalesOrders { get; set; }
+        #endregion
+
+        #region "SalesOrdersDetails DbSet"
+        public DbSet<SalesOrderDetails> SalesOrderDetails { get; set;}
         #endregion
     }
 } 

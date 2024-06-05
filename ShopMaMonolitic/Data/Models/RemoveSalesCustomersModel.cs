@@ -2,6 +2,6 @@
 {
     public class RemoveSalesCustomersModel
     {
-        public int custId { get; set; }
+        public int CustId { get; set; }
     }
 }

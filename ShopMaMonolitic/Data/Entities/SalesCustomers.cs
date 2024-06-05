@@ -4,17 +4,17 @@ namespace ShopMaMonolitic.Data.Entities;
 
 public class SalesCustomers : BaseEntity
 {
-    public string companyName { set; get; }
-    public string contactName { set; get; }
-    public string contactTtitle { set; get; }
-    public string addess { set; get; }
-    public string email { set; get; }
-    public string city { set; get; }
-    public string region { set; get; }
-    public string postalCode { set; get; }
-    public string country { set; get; }
-    public string phone { set; get; }
-    public string fax { set; get; }
+    public string CompanyName { set; get; }
+    public string ContactName { set; get; }
+    public string ContactTtitle { set; get; }
+    public string Address { set; get; }
+    public string Email { set; get; }
+    public string City { set; get; }
+    public string Region { set; get; }
+    public string PostalCode { set; get; }
+    public string Country { set; get; }
+    public string Phone { set; get; }
+    public string Fax { set; get; }
 
     public SalesCustomers()
     {

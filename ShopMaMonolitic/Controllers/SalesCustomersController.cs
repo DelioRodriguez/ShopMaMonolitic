@@ -12,6 +12,7 @@ namespace ShopMaMonolitic.Controllers
         {
             this.salesCustomersDb = salesCustomersDb;
         }
+
         // GET: SalesCustomersController
         public ActionResult Index()
         {

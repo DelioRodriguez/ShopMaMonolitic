@@ -2,24 +2,18 @@
 
 public abstract class BaseEntity
 {
+    public int productId { set; get; }
+    public int orderId { set; get; }
+    public int? custId { set; get; }
+    public int shipperId { set; get; }
+    public int empid { set; get; }
+    /*
+    public DateTime CreationDate { get; set; }
+    public bool Delected { get; }
     protected BaseEntity()
     {
         this.CreationDate = DateTime.Now;
         this.Delected = false;
     }
-    public DateTime? modifyDate { set; get; }
-    public int? modifyUser { set; get; }
-    public int createUser { set; get; }
-    public DateTime createDate { set; get; }
-    public int? deleteUser { set; get; }
-    public DateTime? deleteDate { set; get; }
-    public bool deleted { set; get; }
-    public int productID { set; get; }
-    public int orderID { set; get; }
-    public int? custId { set; get; }
-    public int shipperID { set; get; }
-    public int empid { set; get; }
-    //Marcaba un error por eso se agrego esto, las propiedades no estaban agregadas
-    public DateTime CreationDate { get; private set; }
-    public bool Delected { get; }
+    */
 }

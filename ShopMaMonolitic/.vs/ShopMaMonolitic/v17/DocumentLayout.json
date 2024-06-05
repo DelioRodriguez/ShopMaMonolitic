@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\dbobjetcs\\salesordersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|solutionrelative:data\\dbobjetcs\\salesordersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\entities\\salesorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|solutionrelative:data\\entities\\salesorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +39,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SalesOrders.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Entities\\SalesOrders.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\SalesOrders.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Entities\\SalesOrders.cs*",
+              "RelativeToolTip": "Data\\Entities\\SalesOrders.cs*",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T00:14:46.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SalesOrdersDb.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\DbObjetcs\\SalesOrdersDb.cs",
+              "RelativeDocumentMoniker": "Data\\DbObjetcs\\SalesOrdersDb.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\DbObjetcs\\SalesOrdersDb.cs*",
+              "RelativeToolTip": "Data\\DbObjetcs\\SalesOrdersDb.cs*",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwDAAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T00:07:46.747Z",
+              "EditorCaption": ""
             }
           ]
         }

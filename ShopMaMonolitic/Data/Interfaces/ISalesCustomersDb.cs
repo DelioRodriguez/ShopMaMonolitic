@@ -9,4 +9,4 @@ public interface ISalesCustomersDb
     void RemoveSalesCustomers(RemoveSalesCustomersModel removeSalesCustomers);
     List<SalesCustomersModel> GetSalesCustomers();
     SalesCustomersModel GetSalesCustomers(int SalesId);
-}
+} 
