@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\ShopMaMonolitic",
-    "\\ShopMaMonolitic\\BL",
-    "\\ShopMaMonolitic\\BL\\Interfaces",
-    "\\ShopMaMonolitic\\BL\\Services",
-    "\\ShopMaMonolitic\\Data",
-    "\\ShopMaMonolitic\\Data\\Entities",
-    "\\ShopMaMonolitic\\Data\\Exceptions",
-    "\\ShopMaMonolitic\\Data\\Interfaces",
-    "\\ShopMaMonolitic\\Data\\Models"
+    ""
   ],
-  "SelectedNode": "\\ShopMaMonolitic\\Data\\Interfaces\\ISalesOrderDetailsDb.cs",
+  "SelectedNode": "\\C:\\Users\\Nicole\\Source\\Repos\\DelioRodriguez\\ShopMaMonolitic",
   "PreviewInSolutionExplorer": false
 }
