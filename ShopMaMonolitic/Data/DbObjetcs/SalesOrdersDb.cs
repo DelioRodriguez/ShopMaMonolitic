@@ -15,104 +15,99 @@ public class SalesOrdersDb : ISalesOrdersDb
         this.context = context;
     }
 
+    private SalesOrders ValidateOrderExists(int orderId)
+    {
+        var order = this.context.SalesOrders.Find(orderId);
+        if (order is  null)
+        {
+            throw new SalesOrderExeption("Orden no existente.");
+        }
+        return order;
+    }
+
+    private SalesOrderModel MapToModel(SalesOrders entity)
+    {
+        return new SalesOrderModel
+        {
+            OrderId = entity.OrderId,
+            OrderDate = entity.OrderDate,
+            RequiredDate = entity.RequiredDate,
+            ShippedDate = entity.ShippedDate,
+            Freight = entity.Freight,
+            ShipName = entity.ShipName,
+            ShipAddress = entity.ShipAddress,
+            ShipCity = entity.ShipCity,
+            ShipRegion = entity.ShipRegion,
+            ShipPostalCode = entity.ShipPostalCode,
+            ShipCountry = entity.ShipCountry
+        };
+    }
+
+    private void MapToEntity(SaveSalesOrdersModel model, SalesOrders entity)
+    {
+        entity.custId = model.CustId;
+        entity.empId = model.EmpId;
+        entity.OrderDate = DateTime.Now;
+        entity.RequiredDate = model.RequiredDate;
+        entity.ShippedDate = model.ShippedDate;
+        entity.shipperId = model.ShipperId;
+        entity.Freight = model.Freight;
+        entity.ShipName = model.ShipName;
+        entity.ShipAddress = model.ShipAddress;
+        entity.ShipCity = model.ShipCity;
+        entity.ShipRegion = model.ShipRegion;
+        entity.ShipPostalCode = model.ShipPostalCode;
+        entity.ShipCountry = model.ShipCountry;
+    }
+
+    private void MapToEntity(UpdateSalesOrdersModels model, SalesOrders entity) 
+    {
+        entity.custId = model.CustId;
+        entity.empId = model.EmpId;
+        entity.OrderDate = model.OrderDate;
+        entity.RequiredDate = model.RequiredDate;
+        entity.ShippedDate = model.ShippedDate;
+        entity.shipperId = model.ShipperId;
+        entity.Freight = model.Freight;
+        entity.ShipName = model.ShipName;
+        entity.ShipAddress = model.ShipAddress;
+        entity.ShipCity = model.ShipCity;
+        entity.ShipRegion = model.ShipRegion;
+        entity.ShipPostalCode = model.ShipPostalCode;
+        entity.ShipCountry = model.ShipCountry;
+    }
+
     public SalesOrderModel GetSalesOrder(int orderId)
     {
-        var GetSalesOrder = this.context.SalesOrders.Find(orderId);
-
-        SalesOrderModel salesOrder = new SalesOrderModel()
-        {
-            OrderId = GetSalesOrder.orderId,
-            OrderDate = GetSalesOrder.OrderDate,
-            RequiredDate = GetSalesOrder.RequiredDate,
-            ShippedDate = GetSalesOrder.ShippedDate,
-            Freight = GetSalesOrder.Freight,
-            ShipName = GetSalesOrder.ShipName,
-            ShipAddress = GetSalesOrder.ShipAddress,
-            ShipCity = GetSalesOrder.ShipCity,
-            ShipRegion = GetSalesOrder.ShipRegion,
-            ShipPostalCode = GetSalesOrder.ShipPostalCode,
-            ShipCountry = GetSalesOrder.ShipCountry
-        };
-        return salesOrder;
+        var order = ValidateOrderExists(orderId);
+        return MapToModel(order);
     }
 
     public List<SalesOrderModel> GetSalesOrders()
     {
-        return this.context.SalesOrders.Select(ListSalesOrder =>  new SalesOrderModel()
-        {
-            OrderId = ListSalesOrder.orderId,
-            OrderDate = ListSalesOrder.OrderDate,
-            RequiredDate = ListSalesOrder.RequiredDate,
-            ShippedDate = ListSalesOrder.ShippedDate,
-            Freight = ListSalesOrder.Freight,
-            ShipName = ListSalesOrder.ShipName,
-            ShipAddress = ListSalesOrder.ShipAddress,
-            ShipCity = ListSalesOrder.ShipCity,
-            ShipRegion = ListSalesOrder.ShipRegion,
-            ShipPostalCode = ListSalesOrder.ShipPostalCode,
-            ShipCountry = ListSalesOrder.ShipCountry
-        }).ToList();
+        return this.context.SalesOrders.Select(orders => MapToModel(orders)).ToList();
     }
 
     public void SaveSalesOrders(SaveSalesOrdersModel saveSalesOrders)
     {
-        SalesOrders salesOrders = new SalesOrders()
-        {
-            OrderId = saveSalesOrders.OrderId,
-            custId = saveSalesOrders.CustId,
-            empid = saveSalesOrders.EmpId,
-            OrderDate = saveSalesOrders.OrderDate,
-            RequiredDate = saveSalesOrders.RequiredDate,
-            ShippedDate = saveSalesOrders.ShippedDate,
-            Freight = saveSalesOrders.Freight,
-            ShipName = saveSalesOrders.ShipName,
-            ShipAddress = saveSalesOrders.ShipAddress,
-            ShipCity = saveSalesOrders.ShipCity,
-            ShipRegion = saveSalesOrders.ShipRegion,
-            ShipPostalCode = saveSalesOrders.ShipPostalCode,
-            ShipCountry = saveSalesOrders.ShipCountry
-        };
-        this.context.SalesOrders.Add(salesOrders);
+        var order = new SalesOrders();
+        MapToEntity(saveSalesOrders, order);
+        this.context.SalesOrders.Add(order);
         this.context.SaveChanges();
     }
 
     public void UpdateSalesOrdes(UpdateSalesOrdersModels updateSalesOrdersModels)
     {
-       SalesOrders salesOrdersToUpdate = this.context.SalesOrders.Find(updateSalesOrdersModels.OrderId);
-
-        if(salesOrdersToUpdate is null) 
-        {
-            throw new SalesOrderExeption("Orden no existente.");
-        }
-        salesOrdersToUpdate.OrderId = updateSalesOrdersModels.OrderId;
-        salesOrdersToUpdate.custId = updateSalesOrdersModels.CustId;
-        salesOrdersToUpdate.empid = updateSalesOrdersModels.EmpId;
-        salesOrdersToUpdate.OrderDate = updateSalesOrdersModels.OrderDate;
-        salesOrdersToUpdate.RequiredDate = updateSalesOrdersModels.RequiredDate;
-        salesOrdersToUpdate.ShippedDate = updateSalesOrdersModels.ShippedDate;
-        salesOrdersToUpdate.shipperId = updateSalesOrdersModels.ShipperId;
-        salesOrdersToUpdate.Freight = updateSalesOrdersModels.Freight;
-        salesOrdersToUpdate.ShipName = updateSalesOrdersModels.ShipName;
-        salesOrdersToUpdate.ShipAddress = updateSalesOrdersModels.ShipAddress;
-        salesOrdersToUpdate.ShipCity = updateSalesOrdersModels.ShipCity;
-        salesOrdersToUpdate.ShipRegion = updateSalesOrdersModels.ShipRegion;
-        salesOrdersToUpdate.ShipPostalCode = updateSalesOrdersModels.ShipPostalCode;
-        salesOrdersToUpdate.ShipCountry = updateSalesOrdersModels.ShipCountry;
-
-        this.context.SalesOrders.Update(salesOrdersToUpdate);
+        var order = ValidateOrderExists(updateSalesOrdersModels.OrderId);
+        MapToEntity(updateSalesOrdersModels, order);
+        this.context.SalesOrders.Update(order);
         this.context.SaveChanges();
     }
 
     public void RemoveSalesOrders(RemoveSalesOrdersModel removeSalesOrdersModel)
     {
-        SalesOrders salesOrdersToDelete = this.context.SalesOrders.Find(removeSalesOrdersModel.OrderId);
-        if(salesOrdersToDelete is null)
-        {
-            throw new SalesOrderExeption("Orden no existente.");
-        }
-        salesOrdersToDelete.OrderId = removeSalesOrdersModel.OrderId;
-
-        this.context.SalesOrders.Update(salesOrdersToDelete);
+        var order = ValidateOrderExists(removeSalesOrdersModel.OrderId);
+        this.context.SalesOrders.Remove(order); 
         this.context.SaveChanges();
     }
 }

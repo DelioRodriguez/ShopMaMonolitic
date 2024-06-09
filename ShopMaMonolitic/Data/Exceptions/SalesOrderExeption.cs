@@ -6,4 +6,12 @@ public class SalesOrderExeption : Exception
 	{
 		
 	}
+    private void LogError(string message)
+    {
+
+    }
+    private void SendError(string message)
+    {
+
+    }
 }

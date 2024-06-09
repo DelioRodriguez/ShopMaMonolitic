@@ -14,73 +14,75 @@ public class SalesOrderDetailsDb : ISalesOrderDetailsDb
         this.context = context;
     }
 
+    private SalesOrderDetails ValidateOrderDetailsExists(int orderId)
+    {
+        var orderDetails = this.context.SalesOrderDetails.Find(orderId);
+        if (orderDetails is null)
+        {
+            throw new SalesOrderDetailsException("Orden no existente.");
+        }
+        return orderDetails;
+    }
+
+    private SalesOrderDetailsModel MapToModel(SalesOrderDetails entity)
+    {
+        return new SalesOrderDetailsModel
+        {
+            OrderId = entity.orderId,
+            Discount = entity.Discount,
+            ProductId = entity.productId,
+            UnitPrice = entity.unitPrice,
+            Qty = entity.Qty
+        };
+    }
+
+    private void MapToEntity(SaveSalesOrderDetailsModel model, SalesOrderDetails entity)
+    {
+        entity.orderId = model.OrderId;
+        entity.productId = model.ProductId;
+        entity.unitPrice = model.UnitPrice;
+        entity.Qty = model.Qty;
+        entity.Discount = model.Discount;
+    }
+
+    private void MapToEntity(UpdateSalesOrderDetailsModel model, SalesOrderDetails entity)
+    {
+        entity.unitPrice = model.UnitPrice;
+        entity.Qty = model.Qty;
+        entity.Discount = model.Discount;
+    }
+
     public SalesOrderDetailsModel GetSalesOrderDetails(int orderId)
     {
-        var GetSalesOrderDetails = this.context.SalesOrderDetails.Find(orderId);
-
-        SalesOrderDetailsModel salesOrderDetailsModel = new SalesOrderDetailsModel()
-        {
-            OrderId = GetSalesOrderDetails.orderId,
-            Discount = GetSalesOrderDetails.Discount,
-            ProductId = GetSalesOrderDetails.productId,
-            UnitPrice = GetSalesOrderDetails.unitPrice,
-            Qty = (short)GetSalesOrderDetails.Qty
-        };
-        return salesOrderDetailsModel;
+        var orderDetails = ValidateOrderDetailsExists(orderId);
+        return MapToModel(orderDetails);
     }
 
     public List<SalesOrderDetailsModel> GetSalesOrderDetails()
     {
-        return this.context.SalesOrderDetails.Select(ListSalesOrderDetails => new SalesOrderDetailsModel()
-        {
-            OrderId = ListSalesOrderDetails.orderId,
-            Discount = ListSalesOrderDetails.Discount,
-            ProductId = ListSalesOrderDetails.productId,
-            UnitPrice = ListSalesOrderDetails.unitPrice,
-            Qty = (short)ListSalesOrderDetails.Qty
-        }).ToList();
+        return this.context.SalesOrderDetails.Select(OrderDetails  => MapToModel(OrderDetails)).ToList();
     }
 
     public void SaveSalesOrderDetails(SaveSalesOrderDetailsModel saveSalesOrderDetails)
     {
-        SalesOrderDetails salesOrderDetails = new SalesOrderDetails()
-        {
-            orderId = saveSalesOrderDetails.OrderId,
-            productId = saveSalesOrderDetails.ProductId,
-            unitPrice = saveSalesOrderDetails.UnitPrice,
-            Qty = saveSalesOrderDetails.Qty,
-            Discount = saveSalesOrderDetails.Discount
-        };
-        this.context.SalesOrderDetails.Add(salesOrderDetails);
+       SalesOrderDetails OrderDetails = new SalesOrderDetails();
+        MapToEntity(saveSalesOrderDetails, OrderDetails);
+        this.context.SalesOrderDetails.Add(OrderDetails);
         this.context.SaveChanges();
     }
 
     public void UpdateSalesOrderDetails(UpdateSalesOrderDetailsModel updateSalesOrderDetailsModel)
     {
-        SalesOrderDetails salesOrderDetailsToUpdate = this.context.SalesOrderDetails.Find(updateSalesOrderDetailsModel.OrderID);
-        if (salesOrderDetailsToUpdate is null ) 
-        {
-            throw new SalesOrderDetailsException("Orden no existente.");
-        }
-        salesOrderDetailsToUpdate.unitPrice = updateSalesOrderDetailsModel.UnitPrice;
-        salesOrderDetailsToUpdate.Qty = updateSalesOrderDetailsModel.Qty;
-        salesOrderDetailsToUpdate.Discount = updateSalesOrderDetailsModel.Discount;
-
-        this.context.SalesOrderDetails.Update(salesOrderDetailsToUpdate);
+        var orderDetails = ValidateOrderDetailsExists(updateSalesOrderDetailsModel.OrderId);
+        MapToEntity(updateSalesOrderDetailsModel, orderDetails);
+        this.context.SalesOrderDetails.Update(orderDetails);
         this.context.SaveChanges();
     }
 
     public void RemoveSalesOrderDetails(RemoveSalesOrderDetailsModel removeSalesOrderDetails)
     {
-        SalesOrderDetails salesOrderDetailsToDelete = this.context.SalesOrderDetails.Find(removeSalesOrderDetails.OrderID);
-
-        if (salesOrderDetailsToDelete is null)
-        {
-            throw new SalesCustomersException("Orden no existente.");
-        }
-        salesOrderDetailsToDelete.orderId = removeSalesOrderDetails.OrderID;
-
-        this.context.SalesOrderDetails.Update(salesOrderDetailsToDelete);
-        this.context.SaveChanges();
+        var orderDetails = ValidateOrderDetailsExists(removeSalesOrderDetails.OrderID);
+        this.context.SalesOrderDetails.Remove(orderDetails);
+        this.context.SaveChanges(); 
     }
 }

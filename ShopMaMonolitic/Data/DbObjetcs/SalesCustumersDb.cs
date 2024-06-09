@@ -56,7 +56,7 @@ public class SalesCustumersDb : ISalesCustomersDb
         entity.Fax = model.Fax;
     }
 
-    private void MapToEntity(UpdateSalesCustomersModel model, SalesCustomers entity)
+     private void MapToEntity(UpdateSalesCustomersModel model, SalesCustomers entity)
     {
         entity.CompanyName = model.CompanyName;
         entity.ContactName = model.ContactName;

@@ -15,9 +15,4 @@ public class SalesCustomers : BaseEntity
     public string Country { set; get; }
     public string Phone { set; get; }
     public string Fax { set; get; }
-
-    public SalesCustomers()
-    {
-        
-    }
 }

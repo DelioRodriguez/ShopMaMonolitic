@@ -6,6 +6,7 @@ namespace ShopMaMonolitic.Data.Entities;
 public class SalesOrders : BaseEntity
 {
     public int OrderId { get; set; }
+    public int CustId { get; set; }
     public DateTime OrderDate { get; set; }
     public DateTime RequiredDate { get; set; }
     public DateTime? ShippedDate { get; set; }
@@ -17,9 +18,4 @@ public class SalesOrders : BaseEntity
     public string? ShipPostalCode { get; set; }
     public string ShipCountry { get; set; }
     public decimal Freight { get; internal set; }
-
-    public SalesOrders()
-    {
-        
-    }
 }
