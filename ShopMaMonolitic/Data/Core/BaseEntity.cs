@@ -4,8 +4,8 @@ public abstract class BaseEntity
 {
     protected BaseEntity()
     {
-        this.CreationDate = DateTime.Now;
-        this.Delected = false;
+        this.createDate = DateTime.Now;
+        this.deleted = false;
     }
     public DateTime? modifyDate { set; get; }
     public int? modifyUser { set; get; }
@@ -23,5 +23,5 @@ public abstract class BaseEntity
     public int shipperID { set; get; }
     public int empid { set; get; }
     
-    public string testId { get; set; }
+    public string? testId { get; set; }
 }

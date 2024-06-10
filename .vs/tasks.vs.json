@@ -5,6 +5,11 @@
       "taskLabel": "tarea-wwwroot",
       "appliesTo": "ShopMaMonolitic/wwwroot/",
       "type": "launch"
+    },
+    {
+      "taskLabel": "tarea-StatsScores",
+      "appliesTo": "ShopMaMonolitic/Data/Entities/StatsScores.cs",
+      "type": "launch"
     }
   ]
 }
