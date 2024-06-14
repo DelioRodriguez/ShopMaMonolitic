@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ShopMaMonolitic.Data.Models.ProductionCategoriesModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Categories List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor( model => model.CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.CreateDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.CreaterUser)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item  in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreaterUser)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit","Edit",new {id  = item.CategoryId}) |
+                    @Html.ActionLink("Details","Details",new {Id = item.CategoryId})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
