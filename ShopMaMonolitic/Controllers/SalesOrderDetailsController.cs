@@ -1,28 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopMaMonolitic.Data.Interfaces;
+using ShopMaMonolitic.Data.Models;
 
 namespace ShopMaMonolitic.Controllers
 {
     public class SalesOrderDetailsController : Controller
     {
-        private readonly ISalesOrderDetailsDb salesOrderDetailsDb;
+        private readonly ISalesOrderDetailsDb salesOrderDetailsService;
+
         public SalesOrderDetailsController(ISalesOrderDetailsDb salesOrderDetailsDb)
         {
-            this.salesOrderDetailsDb = salesOrderDetailsDb;
+            this.salesOrderDetailsService = salesOrderDetailsDb;
         }
 
         // GET: SalesOrderDetailsController
         public ActionResult Index()
         {
-            var salesOrderDetails = this.salesOrderDetailsDb.GetSalesOrderDetails();
-            return View();
+            var orderDetails = this.salesOrderDetailsService.GetSalesOrderDetails();
+            return View(orderDetails);
         }
 
         // GET: SalesOrderDetailsController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var ordersDetails = this.salesOrderDetailsService.GetSalesOrderDetail(id);
+            return View(ordersDetails);
         }
 
         // GET: SalesOrderDetailsController/Create
@@ -34,57 +37,73 @@ namespace ShopMaMonolitic.Controllers
         // POST: SalesOrderDetailsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(SaveSalesOrderDetailsModel addModel)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    salesOrderDetailsService.SaveSalesOrderDetails(addModel);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch
+                {
+                    ModelState.AddModelError("", "Unable to save changes.");
+                }
             }
-            catch
-            {
-                return View();
-            }
+            return View(addModel);
         }
 
         // GET: SalesOrderDetailsController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var orderDetails = salesOrderDetailsService.GetSalesOrderDetail(id);
+            return View(orderDetails);
         }
 
         // POST: SalesOrderDetailsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(UpdateSalesOrderDetailsModel updateModel)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    salesOrderDetailsService.UpdateSalesOrderDetails(updateModel);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch
+                {
+                    ModelState.AddModelError("", "Unable to save changes.");
+                }
             }
-            catch
-            {
-                return View();
-            }
+            return View(updateModel);
         }
 
         // GET: SalesOrderDetailsController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var detaildelete = salesOrderDetailsService.GetSalesOrderDetail(id);
+            return View(detaildelete);
         }
 
         // POST: SalesOrderDetailsController/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult DeleteConfirmed(int id)
         {
             try
             {
+                var removeModel = new RemoveSalesOrderDetailsModel { OrderID = id };
+                salesOrderDetailsService.RemoveSalesOrderDetails(removeModel);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                ModelState.AddModelError("", "Unable to delete order detail.");
+                var detail = salesOrderDetailsService.GetSalesOrderDetail(id);
+                return View(detail);
             }
         }
     }

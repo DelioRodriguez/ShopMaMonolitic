@@ -8,5 +8,5 @@ public interface ISalesCustomersDb
     void UpdateSalesCustomers(UpdateSalesCustomersModel updatesalesCustomers);
     void RemoveSalesCustomers(RemoveSalesCustomersModel removeSalesCustomers);
     List<SalesCustomersModel> GetSalesCustomers();
-    SalesCustomersModel GetSalesCustomers(int SalesId);
-} 
+    SalesCustomersModel GetSalesCustomer(int CustId);
+}

@@ -1,4 +1,5 @@
-﻿using ShopMaMonolitic.Data.Context;
+﻿using ShopMaMonolitic.BL.Exceptions;
+using ShopMaMonolitic.Data.Context;
 using ShopMaMonolitic.Data.Entities;
 using ShopMaMonolitic.Data.Exceptions;
 using ShopMaMonolitic.Data.Interfaces;
@@ -23,13 +24,14 @@ public class SalesCustumersDb : ISalesCustomersDb
         return customer;
     }
 
-    private SalesCustomersModel MapToModel(SalesCustomers entity)
+    private static SalesCustomersModel MapToModel(SalesCustomers entity)
     {
         return new SalesCustomersModel
         {
+            CustId = entity.CustId,
             CompanyName = entity.CompanyName,
             ContactName = entity.ContactName,
-            ContactTitle = entity.ContactTtitle,
+            ContactTitle = entity.ContactTitle,
             Address = entity.Address,
             Email = entity.Email,
             City = entity.City,
@@ -41,11 +43,13 @@ public class SalesCustumersDb : ISalesCustomersDb
         };
     }
 
-    private void MapToEntity(SaveSalesCustomersModel model, SalesCustomers entity)
+    private SalesCustomers MapToEntity(SaveSalesCustomersModel model)
     {
+        SalesCustomers entity = new SalesCustomers();
+        entity.CustId = model.CustId;
         entity.CompanyName = model.CompanyName;
         entity.ContactName = model.ContactName;
-        entity.ContactTtitle = model.ContactTitle;
+        entity.ContactTitle = model.ContactTitle;
         entity.Address = model.Address;
         entity.Email = model.Email;
         entity.City = model.City;
@@ -54,13 +58,13 @@ public class SalesCustumersDb : ISalesCustomersDb
         entity.Country = model.Country;
         entity.Phone = model.Phone;
         entity.Fax = model.Fax;
+        return entity;
     }
-
-     private void MapToEntity(UpdateSalesCustomersModel model, SalesCustomers entity)
+    private void MapToEntity(UpdateSalesCustomersModel model, SalesCustomers entity)
     {
         entity.CompanyName = model.CompanyName;
         entity.ContactName = model.ContactName;
-        entity.ContactTtitle = model.ContactTitle;
+        entity.ContactTitle = model.ContactTitle;
         entity.Address = model.Address;
         entity.Email = model.Email;
         entity.City = model.City;
@@ -76,9 +80,9 @@ public class SalesCustumersDb : ISalesCustomersDb
         return this.context.SalesCustomers.Select(customer => MapToModel(customer)).ToList();
     }
 
-    public SalesCustomersModel GetSalesCustomers(int SalesId)
+    public SalesCustomersModel GetSalesCustomer(int CustId)
     {
-        var customer = ValidateCustomerExists(SalesId);
+        var customer = ValidateCustomerExists(CustId);
         return MapToModel(customer);
     }
 
@@ -91,8 +95,20 @@ public class SalesCustumersDb : ISalesCustomersDb
 
     public void SaveSalesCustomers(SaveSalesCustomersModel saveSalesCustomers)
     {
-        var customer = new SalesCustomers();
-        MapToEntity(saveSalesCustomers, customer);
+        if (saveSalesCustomers == null)
+        {
+            throw new SalesCustomerServicesExeption("");
+        }
+        if (saveSalesCustomers.Country.Length > 15)
+        {
+            throw new SalesCustomerServicesExeption("longitud invalida");
+        }
+        if (saveSalesCustomers.City.Length > 15)
+        {
+            throw new SalesCustomerServicesExeption("Logitud Invalida");
+        }
+
+        var customer = MapToEntity(saveSalesCustomers);
         this.context.SalesCustomers.Add(customer);
         this.context.SaveChanges();
     }
@@ -100,6 +116,22 @@ public class SalesCustumersDb : ISalesCustomersDb
     public void UpdateSalesCustomers(UpdateSalesCustomersModel updatesalesCustomers)
     {
         var customer = ValidateCustomerExists(updatesalesCustomers.CustId);
+
+        if (updatesalesCustomers == null)
+        {
+            throw new SalesCustomerServicesExeption("Customer no exist");
+        }
+
+        //Los casos de usos se mueven a la clase Action results 
+        if (updatesalesCustomers.Country.Length > 15)
+        {
+            throw new SalesCustomerServicesExeption("longitud invalida");
+        }
+        if (updatesalesCustomers.City.Length > 15)
+        {
+            throw new SalesCustomerServicesExeption("Logitud Invalida");
+        }
+
         MapToEntity(updatesalesCustomers, customer);
         this.context.SalesCustomers.Update(customer);
         this.context.SaveChanges();

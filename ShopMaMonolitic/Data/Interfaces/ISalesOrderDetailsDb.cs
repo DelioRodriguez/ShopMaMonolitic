@@ -8,5 +8,5 @@ public interface ISalesOrderDetailsDb
     void UpdateSalesOrderDetails(UpdateSalesOrderDetailsModel updateSalesOrderDetailsModel);
     void RemoveSalesOrderDetails(RemoveSalesOrderDetailsModel removeSalesOrderDetailsModel);
     List<SalesOrderDetailsModel>  GetSalesOrderDetails();
-    SalesOrderDetailsModel GetSalesOrderDetails(int orderId);
+    SalesOrderDetailsModel GetSalesOrderDetail(int orderId);
 }

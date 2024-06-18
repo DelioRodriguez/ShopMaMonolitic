@@ -1,6 +1,9 @@
-﻿namespace ShopMaMonolitic.BL.Interfaces;
+﻿using ShopMaMonolitic.Data.Interfaces;
+using ShopMaMonolitic.Data.Models;
+
+namespace ShopMaMonolitic.BL.Interfaces;
 
 public interface ISalesCustomersServices
 {
-    
+    List<SalesCustomersModel> GetSalesCustomers();
 }

@@ -2,17 +2,17 @@
 {
     public class UpdateSalesCustomersModel
     {
-        public int CustId { get; set; }
-        public string CompanyName { get; set; }
-        public string ContactName { get; set; }
-        public string ContactTitle { get; set; }
-        public string Address { get; set; }
-        public string Email { get; set; }
-        public string City { get; set; }
-        public string Region { get; set; }
-        public string PostalCode { get; set; }
-        public string Country { get; set; }
-        public string Phone { get; set; }
-        public string? Fax { get; set; }
+        public int CustId { set; get; }
+        public string CompanyName { set; get; }
+        public string ContactName { set; get; }
+        public string ContactTitle { set; get; }
+        public string Address { set; get; }
+        public string Email { set; get; }
+        public string City { set; get; }
+        public string? Region { set; get; }
+        public string? PostalCode { set; get; }
+        public string Country { set; get; }
+        public string Phone { set; get; }
+        public string? Fax { set; get; }
     }
 }

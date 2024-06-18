@@ -1,29 +1,32 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ShopMaMonolitic.Data.Context;
+using ShopMaMonolitic.BL.Exceptions;
+using ShopMaMonolitic.Data.Exceptions;
 using ShopMaMonolitic.Data.Interfaces;
+using ShopMaMonolitic.Data.Models;
 
 namespace ShopMaMonolitic.Controllers
 {
     public class SalesCustomersController : Controller
     {
-        private readonly ISalesCustomersDb salesCustomersDb;
+        private readonly ISalesCustomersDb salesCustomersService;
         public SalesCustomersController(ISalesCustomersDb salesCustomersDb)
         {
-            this.salesCustomersDb = salesCustomersDb;
+            this.salesCustomersService = salesCustomersDb;
         }
 
         // GET: SalesCustomersController
         public ActionResult Index()
         {
-            var salesCustomers = this.salesCustomersDb.GetSalesCustomers();
+            var salesCustomers = this.salesCustomersService.GetSalesCustomers();
             return View(salesCustomers);
         }
 
         // GET: SalesCustomersController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var cust = salesCustomersService.GetSalesCustomer(id);
+            return View(cust);
         }
 
         // GET: SalesCustomersController/Create
@@ -35,14 +38,17 @@ namespace ShopMaMonolitic.Controllers
         // POST: SalesCustomersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(SaveSalesCustomersModel customerAdd)
         {
+
             try
             {
+                this.salesCustomersService.SaveSalesCustomers(customerAdd);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(SalesCustomerServicesExeption exp)
             {
+                Console.WriteLine(exp.Message);
                 return View();
             }
         }
@@ -50,20 +56,38 @@ namespace ShopMaMonolitic.Controllers
         // GET: SalesCustomersController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var cust = this.salesCustomersService.GetSalesCustomer(id);
+            var updateCustomers = new UpdateSalesCustomersModel
+            {
+                CustId = cust.CustId,
+                CompanyName = cust.CompanyName,
+                ContactName = cust.ContactName,
+                ContactTitle = cust.ContactTitle,
+                Address = cust.Address,
+                Email = cust.Email,
+                City = cust.City,
+                Region = cust.Region,
+                PostalCode = cust.PostalCode,
+                Country = cust.Country,
+                Phone = cust.Phone,
+                Fax = cust.Fax
+            };
+            return View(updateCustomers);
         }
 
         // POST: SalesCustomersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(UpdateSalesCustomersModel updateModel)
         {
             try
             {
+                this.salesCustomersService.UpdateSalesCustomers(updateModel);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(SalesCustomerServicesExeption exp)
             {
+                Console.WriteLine(exp.Message);
                 return View();
             }
         }
@@ -71,21 +95,26 @@ namespace ShopMaMonolitic.Controllers
         // GET: SalesCustomersController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var customer = salesCustomersService.GetSalesCustomer(id);
+            return View(customer);
         }
 
         // POST: SalesCustomersController/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult DeleteConfirmed(int id)
         {
             try
             {
+                var removeModel = new RemoveSalesCustomersModel { CustId = id };
+                salesCustomersService.RemoveSalesCustomers(removeModel);
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                ModelState.AddModelError("", "Unable to delete customer.");
+                var customer = salesCustomersService.GetSalesCustomer(id);
+                return View(customer);
             }
         }
     }

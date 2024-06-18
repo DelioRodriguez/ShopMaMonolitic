@@ -7,7 +7,8 @@ namespace ShopMaMonolitic.Data.Context
     public class ShopContext : DbContext
     {
         #region"Constructor"
-        public ShopContext(DbContextOptions<ShopContext> options)
+        // Constructor que recibe opciones de configuración del DbContext
+        public ShopContext(DbContextOptions<ShopContext> options) : base (options)
         {
         }
         #endregion

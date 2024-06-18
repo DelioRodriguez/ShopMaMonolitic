@@ -25,14 +25,17 @@ public class SalesOrdersDb : ISalesOrdersDb
         return order;
     }
 
-    private SalesOrderModel MapToModel(SalesOrders entity)
+    private static SalesOrderModel MapToModel(SalesOrders entity)
     {
         return new SalesOrderModel
         {
             OrderId = entity.OrderId,
+            CustId = entity.CustId,
+            EmpId = entity.EmpId,
             OrderDate = entity.OrderDate,
             RequiredDate = entity.RequiredDate,
             ShippedDate = entity.ShippedDate,
+            ShipperId = entity.ShipperId,
             Freight = entity.Freight,
             ShipName = entity.ShipName,
             ShipAddress = entity.ShipAddress,
@@ -43,14 +46,15 @@ public class SalesOrdersDb : ISalesOrdersDb
         };
     }
 
-    private void MapToEntity(SaveSalesOrdersModel model, SalesOrders entity)
+    private static void MapToEntity(SaveSalesOrdersModel model, SalesOrders entity)
     {
-        entity.custId = model.CustId;
-        entity.empId = model.EmpId;
+        entity.OrderId = model.OrderId;
+        entity.CustId = model.CustId;
+        entity.EmpId = model.EmpId;
         entity.OrderDate = DateTime.Now;
         entity.RequiredDate = model.RequiredDate;
         entity.ShippedDate = model.ShippedDate;
-        entity.shipperId = model.ShipperId;
+        entity.ShipperId = model.ShipperId;
         entity.Freight = model.Freight;
         entity.ShipName = model.ShipName;
         entity.ShipAddress = model.ShipAddress;
@@ -60,14 +64,14 @@ public class SalesOrdersDb : ISalesOrdersDb
         entity.ShipCountry = model.ShipCountry;
     }
 
-    private void MapToEntity(UpdateSalesOrdersModels model, SalesOrders entity) 
+    private static void MapToEntity(UpdateSalesOrdersModels model, SalesOrders entity) 
     {
-        entity.custId = model.CustId;
-        entity.empId = model.EmpId;
+        entity.CustId = model.CustId;
+        entity.EmpId = model.EmpId;
         entity.OrderDate = model.OrderDate;
         entity.RequiredDate = model.RequiredDate;
         entity.ShippedDate = model.ShippedDate;
-        entity.shipperId = model.ShipperId;
+        entity.ShipperId = model.ShipperId;
         entity.Freight = model.Freight;
         entity.ShipName = model.ShipName;
         entity.ShipAddress = model.ShipAddress;
@@ -77,9 +81,9 @@ public class SalesOrdersDb : ISalesOrdersDb
         entity.ShipCountry = model.ShipCountry;
     }
 
-    public SalesOrderModel GetSalesOrder(int orderId)
+    public SalesOrderModel GetSalesOrder(int OrderId)
     {
-        var order = ValidateOrderExists(orderId);
+        var order = ValidateOrderExists(OrderId);
         return MapToModel(order);
     }
 
