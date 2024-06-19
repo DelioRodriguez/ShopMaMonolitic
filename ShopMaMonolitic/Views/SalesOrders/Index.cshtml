@@ -11,54 +11,55 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CustId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmpId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RequiredDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShippedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShipperId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Freight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShipName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShipAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShipCity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShipRegion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShipPostalCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShipCountry)
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequiredDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShippedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipperId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Freight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipRegion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipPostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipCountry)
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.OrderId)
@@ -103,11 +104,11 @@
                 @Html.DisplayFor(modelItem => item.ShipCountry)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
             </td>
         </tr>
-}
+    }
     </tbody>
 </table>

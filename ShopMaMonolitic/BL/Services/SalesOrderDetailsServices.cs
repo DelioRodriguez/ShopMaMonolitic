@@ -3,6 +3,7 @@ using ShopMaMonolitic.Data.Interfaces;
 using ShopMaMonolitic.Data.Models;
 
 namespace ShopMaMonolitic.BL.Services;
+
 public class SalesOrderDetailsServices : ISalesOrderDetailsServices
 {
     private readonly ISalesOrderDetailsDb salesOrderDetailsDb;
@@ -11,8 +12,9 @@ public class SalesOrderDetailsServices : ISalesOrderDetailsServices
     {
         this.salesOrderDetailsDb = salesOrderDetailsDb;
     }
+
     public List<SalesOrderDetailsModel> GetSalesOrderDetails()
     {
-        return this.salesOrderDetailsDb.GetSalesOrderDetails();
+        return salesOrderDetailsDb.GetSalesOrderDetails();
     }
 }

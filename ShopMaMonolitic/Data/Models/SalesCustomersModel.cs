@@ -1,6 +1,6 @@
 ﻿namespace ShopMaMonolitic.Data.Models;
 
-public class  SalesCustomersModel
+public class SalesCustomersModel
 {
     public int CustId { set; get; }
     public string CompanyName { set; get; }

@@ -12,8 +12,9 @@ public class SalesCustomersServices : ISalesCustomersServices
     {
         this.salesCustomersDb = salesCustomersDb;
     }
+
     public List<SalesCustomersModel> GetSalesCustomers()
     {
-        return this.salesCustomersDb.GetSalesCustomers();
+        return salesCustomersDb.GetSalesCustomers();
     }
 }

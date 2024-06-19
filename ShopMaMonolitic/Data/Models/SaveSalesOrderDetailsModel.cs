@@ -1,13 +1,10 @@
-﻿using System.Data.SqlTypes;
+﻿namespace ShopMaMonolitic.Data.Models;
 
-namespace ShopMaMonolitic.Data.Models
+public class SaveSalesOrderDetailsModel
 {
-    public class SaveSalesOrderDetailsModel
-    {
-        public int OrderId { get; set; }
-        public int ProductId { get; set; }
-        public decimal UnitPrice { get; set; }
-        public short Qty { get; set; }
-        public decimal Discount { get; set; }
-    }
+    public int OrderId { set; get; }
+    public int ProductId { set; get; }
+    public decimal UnitPrice { get; set; }
+    public short Qty { get; set; }
+    public decimal Discount { get; set; }
 }

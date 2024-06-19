@@ -1,3 +1,3 @@
 ﻿namespace ShopMaMonolitic.BL.Dtos;
 
-public record SalesCustomersDtoAdd();
+public record SalesCustomersDtoAdd;

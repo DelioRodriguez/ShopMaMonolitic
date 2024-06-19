@@ -1,7 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using ShopMaMonolitic.Data.Core;
-using System.Data.SqlTypes;
 
 namespace ShopMaMonolitic.Data.Entities;
 

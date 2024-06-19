@@ -1,5 +1,4 @@
-﻿using ShopMaMonolitic.Data.Interfaces;
-using ShopMaMonolitic.Data.Models;
+﻿using ShopMaMonolitic.Data.Models;
 
 namespace ShopMaMonolitic.BL.Interfaces;
 

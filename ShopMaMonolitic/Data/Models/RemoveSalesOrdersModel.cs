@@ -1,7 +1,6 @@
-﻿namespace ShopMaMonolitic.Data.Models
+﻿namespace ShopMaMonolitic.Data.Models;
+
+public class RemoveSalesOrdersModel
 {
-    public class RemoveSalesOrdersModel
-    {
-        public int OrderId { get; set; }
-    }
+    public int OrderId { get; set; }
 }
