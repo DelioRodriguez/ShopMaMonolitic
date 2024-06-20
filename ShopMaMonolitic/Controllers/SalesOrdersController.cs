@@ -114,7 +114,6 @@ public class SalesOrdersController : Controller
         }
         catch
         {
-            ModelState.AddModelError("", "Failed to delete order.");
             var order = salesOrdersService.GetSalesOrder(id);
             return View(order);
         }

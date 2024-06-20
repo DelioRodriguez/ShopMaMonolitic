@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\controllers\\salesorderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|solutionrelative:controllers\\salesorderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\salesorderdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|solutionrelative:views\\salesorderdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\salesorderdetails\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|solutionrelative:views\\salesorderdetails\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\salesorderdetails\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{85F218AB-0BD6-418F-B34F-A8335C8BF993}|ShopMaMonolitic.csproj|solutionrelative:views\\salesorderdetails\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,58 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\SalesOrderDetails\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\SalesOrderDetails\\Details.cshtml",
-              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\SalesOrderDetails\\Details.cshtml",
-              "RelativeToolTip": "Views\\SalesOrderDetails\\Details.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAC0AAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T01:02:09.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\SalesOrderDetails\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\SalesOrderDetails\\Create.cshtml",
-              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\SalesOrderDetails\\Create.cshtml",
-              "RelativeToolTip": "Views\\SalesOrderDetails\\Create.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T00:45:51.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\SalesOrderDetails\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\SalesOrderDetails\\Index.cshtml",
-              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\SalesOrderDetails\\Index.cshtml",
-              "RelativeToolTip": "Views\\SalesOrderDetails\\Index.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADkAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T00:44:05.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SalesOrderDetailsController.cs",
-              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\SalesOrderDetailsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SalesOrderDetailsController.cs",
-              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\SalesOrderDetailsController.cs",
-              "RelativeToolTip": "Controllers\\SalesOrderDetailsController.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAAAEsAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T22:43:55.37Z",
-              "EditorCaption": ""
             }
           ]
         }

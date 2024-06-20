@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShopMaMonolitic.BL.Exceptions;
+using ShopMaMonolitic.BL.Services;
 using ShopMaMonolitic.Data.Interfaces;
 using ShopMaMonolitic.Data.Models;
 
@@ -80,6 +81,32 @@ public class SalesOrderDetailsController : Controller
         {
             Console.WriteLine(exp.Message);
             return View();
+        }
+    }
+
+    // GET: SalesOrderDetailsController/Delete/5
+    public ActionResult Delete(int id)
+    {
+        var detaildelete = salesOrderDetailsService.GetSalesOrderDetail(id);
+        return View(detaildelete);
+    }
+
+    // POST: SalesOrderDetailsController/Delete/5
+    [HttpPost]
+    [ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+        try
+        {
+            var removeModel = new RemoveSalesOrderDetailsModel { OrderId = id };
+            salesOrderDetailsService.RemoveSalesOrderDetails(removeModel);
+            return RedirectToAction(nameof(Index));
+        }
+        catch
+        {
+            var detail = salesOrderDetailsService.GetSalesOrderDetail(id);
+            return View(detail);
         }
     }
 }

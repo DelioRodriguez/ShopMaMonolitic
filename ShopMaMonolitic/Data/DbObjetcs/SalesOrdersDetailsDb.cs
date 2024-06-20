@@ -84,4 +84,11 @@ public class SalesOrdersDetailsDb : ISalesOrderDetailsDb
         context.SalesOrderDetails.Update(orderDetails);
         context.SaveChanges();
     }
+
+    public void RemoveSalesOrderDetails(RemoveSalesOrderDetailsModel removeSalesOrderDetailsModel)
+    {
+        var orderDetails = ValidateOrderDetailsExists(removeSalesOrderDetailsModel.OrderId);
+        context.SalesOrderDetails.Remove(orderDetails);
+        context.SaveChanges();
+    }
 }

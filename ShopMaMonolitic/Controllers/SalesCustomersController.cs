@@ -111,7 +111,6 @@ public class SalesCustomersController : Controller
         }
         catch
         {
-            ModelState.AddModelError("", "Unable to delete customer.");
             var customer = salesCustomersService.GetSalesCustomer(id);
             return View(customer);
         }
