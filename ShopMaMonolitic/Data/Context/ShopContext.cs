@@ -11,7 +11,7 @@ namespace ShopMaMonolitic.Data.Context
         }
 
         // DbSet para cada entidad del modelo de datos
-        public DbSet<Products> Products { get; set; }
+        public DbSet<ProductionProducts> Products { get; set; }
         public DbSet<ProductionCategories> ProductionCategories { get; set; }
         public DbSet<ProductionSuppliers> ProductionSuppliers { get; set; }
 

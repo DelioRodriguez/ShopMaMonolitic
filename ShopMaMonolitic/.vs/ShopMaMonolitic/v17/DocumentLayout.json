@@ -1,10 +1,202 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\ShopMaMonolotic\\ShopMaMonolitic\\",
+  "WorkspaceRootPath": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolotic\\shopmamonolitic\\views\\productioncategories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\controllers\\productionsupplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:controllers\\productionsupplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\controllers\\productionproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:controllers\\productionproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productionsuppliersaddmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productionsuppliersaddmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionsuppliers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionsuppliers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\dbobjetcs\\productionsuppliersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\dbobjetcs\\productionsuppliersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productionsuppliersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productionsuppliersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionsuppliers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionsuppliers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\entities\\productionsuppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\entities\\productionsuppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionsuppliers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionsuppliers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionsuppliers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionsuppliers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\entities\\productionproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\entities\\productionproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionsuppliers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionsuppliers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\bl\\services\\productionsuppliersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:bl\\services\\productionsuppliersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\interfaces\\iproductionsuppliersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\interfaces\\iproductionsuppliersdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\bl\\interfaces\\iproductionsuppliersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:bl\\interfaces\\iproductionsuppliersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\exceptions\\productionsuppliersdbexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\exceptions\\productionsuppliersdbexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productionsuppliersremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productionsuppliersremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\bl\\exceptions\\productionsuppliersservicesexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:bl\\exceptions\\productionsuppliersservicesexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\bl\\interfaces\\iproductionproductsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:bl\\interfaces\\iproductionproductsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\controllers\\productioncategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:controllers\\productioncategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\dbobjetcs\\productioncategoriesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\dbobjetcs\\productioncategoriesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\dbobjetcs\\productionproductsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\dbobjetcs\\productionproductsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionproducts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionproducts\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productionproductsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productionproductsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productioncategories\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productioncategories\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionproducts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionproducts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionproducts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionproducts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionproducts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionproducts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productionproducts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productionproducts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productionproductsupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productionproductsupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productionproductsaddmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productionproductsaddmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productioncategories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productioncategories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\interfaces\\iproductionproductsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\interfaces\\iproductionproductsdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\entities\\productioncategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\entities\\productioncategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\context\\shopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\context\\shopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productioncategories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productioncategories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\exceptions\\productioncategoriesdbexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\exceptions\\productioncategoriesdbexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\views\\productioncategories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:views\\productioncategories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\interfaces\\iproductioncategoriesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\interfaces\\iproductioncategoriesdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productioncategoriesremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productioncategoriesremovemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productioncategoriesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productioncategoriesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\data\\models\\productioncategorieaddmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:data\\models\\productioncategorieaddmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\bl\\dtos\\productionsuppliersdtoadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:bl\\dtos\\productionsuppliersdtoadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\bl\\dtos\\productionproductsdtoadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:bl\\dtos\\productionproductsdtoadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\bl\\dtos\\productioncategoriesdtoadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:bl\\dtos\\productioncategoriesdtoadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|c:\\shopmamonolitic\\shopmamonolitic\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{22BAD0F1-FE19-42A1-B009-B0D5A3FBB769}|ShopMaMonolitic.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,15 +206,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 714,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
@@ -37,21 +245,633 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductionSuppliersAddModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionSuppliersAddModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionSuppliersAddModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionSuppliersAddModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionSuppliersAddModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T16:12:05.363Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductionSuppliersController.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\ProductionSuppliersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductionSuppliersController.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\ProductionSuppliersController.cs",
+              "RelativeToolTip": "Controllers\\ProductionSuppliersController.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAqwHUAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:34:50.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductionSuppliersDb.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\DbObjetcs\\ProductionSuppliersDb.cs",
+              "RelativeDocumentMoniker": "Data\\DbObjetcs\\ProductionSuppliersDb.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\DbObjetcs\\ProductionSuppliersDb.cs",
+              "RelativeToolTip": "Data\\DbObjetcs\\ProductionSuppliersDb.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAmwBsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:29:06.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionSuppliers\\Details.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Details.cshtml",
+              "RelativeToolTip": "Views\\ProductionSuppliers\\Details.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAF0AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T16:02:06.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\ShopMaMonolotic\\ShopMaMonolitic\\Views\\ProductionCategories\\Edit.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionSuppliers\\Edit.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ProductionSuppliers\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T16:05:00.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionSuppliers\\Delete.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Delete.cshtml",
+              "RelativeToolTip": "Views\\ProductionSuppliers\\Delete.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T16:06:13.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductionProductsController.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\ProductionProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductionProductsController.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\ProductionProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductionProductsController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAIwHcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:29:33.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionSuppliers\\Create.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Create.cshtml",
+              "RelativeToolTip": "Views\\ProductionSuppliers\\Create.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T16:03:46.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductionSuppliers.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Entities\\ProductionSuppliers.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\ProductionSuppliers.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Entities\\ProductionSuppliers.cs",
+              "RelativeToolTip": "Data\\Entities\\ProductionSuppliers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:53:21.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductionSuppliersModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionSuppliersModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionSuppliersModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionSuppliersModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionSuppliersModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAMAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:43:39.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionSuppliers\\Index.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionSuppliers\\Index.cshtml",
+              "RelativeToolTip": "Views\\ProductionSuppliers\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T15:36:45.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductionSuppliersRemoveModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionSuppliersRemoveModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionSuppliersRemoveModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionSuppliersRemoveModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionSuppliersRemoveModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:43:28.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductionProducts.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Entities\\ProductionProducts.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\ProductionProducts.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Entities\\ProductionProducts.cs",
+              "RelativeToolTip": "Data\\Entities\\ProductionProducts.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T13:46:33.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductionSuppliersService.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Services\\ProductionSuppliersService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\ProductionSuppliersService.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Services\\ProductionSuppliersService.cs",
+              "RelativeToolTip": "BL\\Services\\ProductionSuppliersService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:39:48.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductionSuppliersDbException.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Exceptions\\ProductionSuppliersDbException.cs",
+              "RelativeDocumentMoniker": "Data\\Exceptions\\ProductionSuppliersDbException.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Exceptions\\ProductionSuppliersDbException.cs",
+              "RelativeToolTip": "Data\\Exceptions\\ProductionSuppliersDbException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:44:16.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IProductionSuppliersServices.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Interfaces\\IProductionSuppliersServices.cs",
+              "RelativeDocumentMoniker": "BL\\Interfaces\\IProductionSuppliersServices.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Interfaces\\IProductionSuppliersServices.cs",
+              "RelativeToolTip": "BL\\Interfaces\\IProductionSuppliersServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:42:32.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IProductionSuppliersDb.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Interfaces\\IProductionSuppliersDb.cs",
+              "RelativeDocumentMoniker": "Data\\Interfaces\\IProductionSuppliersDb.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Interfaces\\IProductionSuppliersDb.cs",
+              "RelativeToolTip": "Data\\Interfaces\\IProductionSuppliersDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:47:29.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductionSuppliersServicesException.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Exceptions\\ProductionSuppliersServicesException.cs",
+              "RelativeDocumentMoniker": "BL\\Exceptions\\ProductionSuppliersServicesException.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Exceptions\\ProductionSuppliersServicesException.cs",
+              "RelativeToolTip": "BL\\Exceptions\\ProductionSuppliersServicesException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T15:40:44.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACUAAACIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T13:44:27.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IProductionProductsService.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Interfaces\\IProductionProductsService.cs",
+              "RelativeDocumentMoniker": "BL\\Interfaces\\IProductionProductsService.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Interfaces\\IProductionProductsService.cs",
+              "RelativeToolTip": "BL\\Interfaces\\IProductionProductsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T17:59:54.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductionProductsModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionProductsModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionProductsModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionProductsModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionProductsModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:03:18.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionProducts\\Delete.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Delete.cshtml",
+              "RelativeToolTip": "Views\\ProductionProducts\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T15:22:43.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAjwBIAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:45:56.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductionCategoriesDb.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\DbObjetcs\\ProductionCategoriesDb.cs",
+              "RelativeDocumentMoniker": "Data\\DbObjetcs\\ProductionCategoriesDb.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\DbObjetcs\\ProductionCategoriesDb.cs",
+              "RelativeToolTip": "Data\\DbObjetcs\\ProductionCategoriesDb.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAcwHMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:53:37.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductionCategoriesController.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\ProductionCategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductionCategoriesController.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\ProductionCategoriesController.cs",
+              "RelativeToolTip": "Controllers\\ProductionCategoriesController.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAmwIMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:31:59.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionCategories\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionCategories\\Delete.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionCategories\\Delete.cshtml",
+              "RelativeToolTip": "Views\\ProductionCategories\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-18T18:46:34.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionProducts\\Edit.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ProductionProducts\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T15:20:46.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductionProductsDb.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\DbObjetcs\\ProductionProductsDb.cs",
+              "RelativeDocumentMoniker": "Data\\DbObjetcs\\ProductionProductsDb.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\DbObjetcs\\ProductionProductsDb.cs",
+              "RelativeToolTip": "Data\\DbObjetcs\\ProductionProductsDb.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAcwH4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:09:03.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionProducts\\Index.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Index.cshtml",
+              "RelativeToolTip": "Views\\ProductionProducts\\Index.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T13:44:08.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ProductionProductsAddModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionProductsAddModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionProductsAddModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionProductsAddModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionProductsAddModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T14:26:45.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionProducts\\Details.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Details.cshtml",
+              "RelativeToolTip": "Views\\ProductionProducts\\Details.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAowEsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T14:01:24.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionProducts\\Create.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionProducts\\Create.cshtml",
+              "RelativeToolTip": "Views\\ProductionProducts\\Create.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T15:18:34.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductionProductsUpdateModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionProductsUpdateModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionProductsUpdateModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionProductsUpdateModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionProductsUpdateModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T14:35:43.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionCategories\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionCategories\\Index.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionCategories\\Index.cshtml",
+              "RelativeToolTip": "Views\\ProductionCategories\\Index.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADYAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-18T18:47:20.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ShopContext.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Context\\ShopContext.cs",
+              "RelativeDocumentMoniker": "Data\\Context\\ShopContext.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Context\\ShopContext.cs",
+              "RelativeToolTip": "Data\\Context\\ShopContext.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA0AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T14:11:48.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProductionCategories.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Entities\\ProductionCategories.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\ProductionCategories.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Entities\\ProductionCategories.cs",
+              "RelativeToolTip": "Data\\Entities\\ProductionCategories.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T13:47:04.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IProductionProductsDb.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Interfaces\\IProductionProductsDb.cs",
+              "RelativeDocumentMoniker": "Data\\Interfaces\\IProductionProductsDb.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Interfaces\\IProductionProductsDb.cs",
+              "RelativeToolTip": "Data\\Interfaces\\IProductionProductsDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:06:23.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionCategories\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProductionCategories\\Details.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionCategories\\Details.cshtml",
+              "RelativeToolTip": "Views\\ProductionCategories\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T12:59:16.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionCategories\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\ProductionCategories\\Edit.cshtml",
-              "ToolTip": "C:\\ShopMaMonolotic\\ShopMaMonolitic\\Views\\ProductionCategories\\Edit.cshtml",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Views\\ProductionCategories\\Edit.cshtml",
               "RelativeToolTip": "Views\\ProductionCategories\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-13T23:53:49.483Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProductionCategoriesDbException.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Exceptions\\ProductionCategoriesDbException.cs",
+              "RelativeDocumentMoniker": "Data\\Exceptions\\ProductionCategoriesDbException.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Exceptions\\ProductionCategoriesDbException.cs",
+              "RelativeToolTip": "Data\\Exceptions\\ProductionCategoriesDbException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T13:13:08.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ProductionCategoriesModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionCategoriesModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionCategoriesModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionCategoriesModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionCategoriesModel.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T19:08:08.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ProductionCategoriesRemoveModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionCategoriesRemoveModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionCategoriesRemoveModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionCategoriesRemoveModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionCategoriesRemoveModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:50:22.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IProductionCategoriesDb.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Interfaces\\IProductionCategoriesDb.cs",
+              "RelativeDocumentMoniker": "Data\\Interfaces\\IProductionCategoriesDb.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Interfaces\\IProductionCategoriesDb.cs",
+              "RelativeToolTip": "Data\\Interfaces\\IProductionCategoriesDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:06:18.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ProductionCategorieAddModel.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionCategorieAddModel.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\ProductionCategorieAddModel.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Data\\Models\\ProductionCategorieAddModel.cs",
+              "RelativeToolTip": "Data\\Models\\ProductionCategorieAddModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T19:08:07.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T18:31:56.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ProductionSuppliersDtoAdd.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Dtos\\ProductionSuppliersDtoAdd.cs",
+              "RelativeDocumentMoniker": "BL\\Dtos\\ProductionSuppliersDtoAdd.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Dtos\\ProductionSuppliersDtoAdd.cs",
+              "RelativeToolTip": "BL\\Dtos\\ProductionSuppliersDtoAdd.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T17:56:52.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ProductionProductsDtoAdd.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Dtos\\ProductionProductsDtoAdd.cs",
+              "RelativeDocumentMoniker": "BL\\Dtos\\ProductionProductsDtoAdd.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Dtos\\ProductionProductsDtoAdd.cs",
+              "RelativeToolTip": "BL\\Dtos\\ProductionProductsDtoAdd.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T17:56:51.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ProductionCategoriesDtoAdd.cs",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Dtos\\ProductionCategoriesDtoAdd.cs",
+              "RelativeDocumentMoniker": "BL\\Dtos\\ProductionCategoriesDtoAdd.cs",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\BL\\Dtos\\ProductionCategoriesDtoAdd.cs",
+              "RelativeToolTip": "BL\\Dtos\\ProductionCategoriesDtoAdd.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T17:56:48.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\ShopMaMonolitic\\ShopMaMonolitic\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-18T17:54:45.143Z"
             }
           ]
         },

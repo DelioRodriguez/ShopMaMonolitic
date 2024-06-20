@@ -2,14 +2,14 @@
 using ShopMaMonolitic.Data.Entities;
 using ShopMaMonolitic.Data.Models;
 
-namespace DefaultNamespace;
+namespace ShopMaMonolitic.Data.Interfaces;
 
-public interface IProductionProducts
+public interface IProductionProductsDb
 {
-    ShopContext Context { get; }
+   
 
     List<ProductionProductsModel> GetProducts();
-    ProductionProductsModel GetProducts(int productsID);
+    ProductionProductsModel GetProduct(int productsID);
     void SaveProducts(ProductionProductsAddModel productsAdd);
     void UpdateProducts(ProductionProductsUpdateModel productsUpdate);    
     void RemoveProducts( ProductionProductsRemoveModel productsRemove);

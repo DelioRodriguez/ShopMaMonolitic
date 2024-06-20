@@ -6,6 +6,8 @@ namespace ShopMaMonolitic.Data.Models
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
+        public int categoryID { get; set; }
+        public int supplierID { get; set; }
         public DateTime ModifyDate { get; set; }
         public DateTime CreationDate { get; set; }
         public int ModifyUser {  get; set; }

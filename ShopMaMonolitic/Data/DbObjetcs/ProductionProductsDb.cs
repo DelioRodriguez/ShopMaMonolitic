@@ -1,104 +1,126 @@
-﻿using ShopMaMonolitic.Data.Context;
+﻿using ShopMaMonolitic.BL.Exceptions;
+using ShopMaMonolitic.Data.Context;
 using ShopMaMonolitic.Data.Entities;
+using ShopMaMonolitic.Data.Interfaces;
 using ShopMaMonolitic.Data.Models;
-using System.Data.SqlTypes;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace DefaultNamespace;
-
-public class ProductionProductsDb : IProductionProducts
-
-
+namespace ShopMaMonolitic.Data.DbObjects
 {
-
-    private readonly ShopContext context;
-
-    public ProductionProductsDb(ShopContext context)
+    public class ProductionProductsDb : IProductionProductsDb
     {
-        this.context = context;
-    }
+        private readonly ShopContext context;
 
-    public ShopContext Context => context;
-
-    private ProductionProductsModel MapToModel(Products products)
-    {
-        return new ProductionProductsModel
+        public ProductionProductsDb(ShopContext context)
         {
-            ProductName = products.productName,
-            UnitPrice = products.unitPrice,
-            Discontinued = products.discontinued,
-            CreationDate = products.creation_date,
-            CreatorUser = products.creation_user
-        };
-
-    }
-
-    private Products GetProductsByID(int productID)
-    {
-        var product = this.Context.Products.Find(productID);
-        if (product == null)
-        {
-            throw new NotImplementedException("Este producto no se encuentra");
+            this.context = context;
         }
-        return product;
-    }
-    public ProductionProductsModel GetProducts(int productsID)
-    {
-        var product = GetProductsByID(productsID);
-        return MapToModel(product);
-    }
 
+       
 
-
-
-    public List<ProductionProductsModel> GetProducts()
-    {
-        return this.Context.Products.Select(cc => MapToModel(cc)).ToList();
-    }
-
-
-
-    public void RemoveProducts(ProductionProductsRemoveModel productsRemove)
-    {
-        var productToRemove = GetProductsByID(productsRemove.ProductID);
-        UpdateDeletedFields(productToRemove, productsRemove.Deleted, productsRemove.DeletedDate, productsRemove.DeletedUser);
-        this.Context.Products.Remove(productToRemove);
-        this.Context.SaveChanges();
-    }
-
-    public void SaveProducts(ProductionProductsAddModel productsAdd)
-    {
-        var product = new Products
+        private static ProductionProductsModel MapToModel(ProductionProducts product)
         {
-            productName = productsAdd.ProductName,
-            creation_date = productsAdd.CreationDate,
-            creation_user = productsAdd.CreatorUser,
-            unitPrice = productsAdd.UnitPrice,
-            discontinued = productsAdd.Discontinued,
-        };
-    }
+            return new ProductionProductsModel
+            {
+                ProductID = product.productID,
+                ProductName = product.productName,
+                supplierID = product.supplierID,
+                categoryID = product.categoryID,
+                UnitPrice = product.unitPrice,
+                Discontinued = product.discontinued,
+                CreationDate = product.creation_date,
+                CreatorUser = product.creation_user,
+                modify_date = product.modify_date,
+                modify_user = product.modify_user
+            };
+        }
 
-    public void UpdateProducts(ProductionProductsUpdateModel productsUpdate)
-    {
-        var productToUpdate = GetProductsByID(productsUpdate.ProductID);
-        UpdateProductsFields(productToUpdate, productsUpdate.ProductName, productsUpdate.ModifyDate, productsUpdate.ModifyUser, productsUpdate.CreationDate, productsUpdate.UnitPrice, productsUpdate.Discontinued);
-    }
+        private ProductionProducts MapToEntity(ProductionProductsAddModel model)
+        {
+            ProductionProducts entity = new ProductionProducts();
+            entity.productName = model.ProductName;
+            entity.categoryID = model.categoryID;
+            entity.supplierID = model.supplierID;
+            entity.unitPrice = model.UnitPrice;
+            entity.creation_user = model.CreatorUser;
+            entity.creation_date = model.CreationDate;
+            entity.discontinued = model.Discontinued;
+            return entity;
+        }
 
-    private void UpdateProductsFields(Products products, string productName, DateTime modifyDate, int modifyUser, DateTime creationDate, decimal unitPrice, bool discontinued)
-    {
-        products.productName = productName;
-        products.modify_date = modifyDate;
-        products.modify_user = modifyUser;
-        products.creation_date = creationDate;
-        products.unitPrice = unitPrice;
-        products.discontinued = discontinued;
-    }
+        private void MapToEntity(ProductionProductsUpdateModel model, ProductionProducts entity)
+        {
+            entity.productName = model.ProductName;
+            entity.categoryID = entity.categoryID;
+            entity.supplierID = entity.supplierID;
+            entity.modify_date = model.ModifyDate;
+            entity.modify_user = model.ModifyUser;
+            entity.creation_date = model.CreationDate;
+            entity.unitPrice = model.UnitPrice;
+            entity.discontinued = model.Discontinued;
+        }
 
-    private void UpdateDeletedFields(Products products, bool deleted, DateTime deleteDate, int deleteUser)
-    {
-        products.deleted = deleted;
-        products.delete_date = deleteDate;
-        products.delete_user = deleteUser;
-    }
+        public List<ProductionProductsModel> GetProducts()
+        {
+            return context.Products.Select(product => MapToModel(product)).ToList();
+        }
 
-   
+        public ProductionProductsModel GetProduct(int productId)
+        {
+            var product = ValidateProductExists(productId);
+            return MapToModel(product);
+        }
+        private ProductionProducts ValidateProductExists(int productId)
+        {
+            var product = context.Products.Find(productId);
+            if (product == null)
+            {
+                throw new NotImplementedException("El producto no se encuentra");
+            }
+            return product;
+        }
+        public void RemoveProducts(ProductionProductsRemoveModel removeProducts)
+        {
+            var product = ValidateProductExists(removeProducts.ProductID);
+            UpdateDeletedFields(product, removeProducts.Deleted, removeProducts.DeletedDate, removeProducts.DeletedUser);
+            context.Products.Remove(product);
+            context.SaveChanges();
+        }
+
+        public void SaveProducts(ProductionProductsAddModel saveProducts)
+        {
+            if (saveProducts == null)
+            {
+                throw new ProductionProductsServiceException("El modelo de producto es nulo");
+            }
+
+            var product = MapToEntity(saveProducts);
+            context.Products.Add(product);
+            context.SaveChanges();
+        }
+
+        public void UpdateProducts(ProductionProductsUpdateModel updateProducts)
+        {
+            var product = ValidateProductExists(updateProducts.ProductID);
+
+            if (updateProducts == null)
+            {
+                throw new ProductionProductsServiceException("El producto no existe");
+            }
+
+            MapToEntity(updateProducts, product);
+            context.Products.Update(product);
+            context.SaveChanges();
+        }
+
+        private void UpdateDeletedFields(ProductionProducts product, bool deleted, DateTime deleteDate, int deleteUser)
+        {
+            product.deleted = deleted;
+            product.delete_date = deleteDate;
+            product.delete_user = deleteUser;
+            context.SaveChanges();
+        }
+    }
 }

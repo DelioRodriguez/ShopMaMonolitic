@@ -1,9 +1,10 @@
-﻿using ShopMaMonolitic.Data.Context;
+﻿using ShopMaMonolitic.BL.Exceptions;
+using ShopMaMonolitic.Data.Context;
 using ShopMaMonolitic.Data.Entities;
 using ShopMaMonolitic.Data.Interfaces;
 using ShopMaMonolitic.Data.Models;
 
-namespace ShopMaMonolitic.Data.DbObjects
+namespace ShopMaMonolitic.Data.DbObjetcs
 {
     public class ProductionCategoriesDb : IProductionCategoriesDb
     {
@@ -14,7 +15,15 @@ namespace ShopMaMonolitic.Data.DbObjects
             this.context = context;
         }
 
-        public ShopContext Context => context;
+        private ProductionCategories ValidateCategoryExists(int categoryId)
+        {
+            var category = context.ProductionCategories.Find(categoryId);
+            if (category == null)
+            {
+                throw new ProductionCategoriesServiceException("Esta Categoria no se encuentra");
+            }
+            return category;
+        }
 
         private static ProductionCategoriesModel MapToModel(ProductionCategories category)
         {
@@ -24,62 +33,73 @@ namespace ShopMaMonolitic.Data.DbObjects
                 CategoryName = category.CategoryName,
                 Description = category.description,
                 CreateDate = category.creation_date,
-                CreaterUser = category.creation_user
+                CreaterUser = category.creation_user,
+                modify_user = category.modify_user,
+                modify_date = category.modify_date,
             };
         }
 
-        private ProductionCategories GetCategoryById(int categoryId)
+        private ProductionCategories MapToEntity(ProductionCategorieAddModel model)
         {
-            var category = this.Context.ProductionCategories.Find(categoryId);
-            if (category == null)
-            {
-                throw new NotImplementedException("Esta Categoria no se encuentra");
-            }
-            return category;
+            ProductionCategories entity = new ProductionCategories();
+            entity.CategoryName = model.CategoryName;
+            entity.description = model.Description;
+            entity.creation_user = model.CreatorUser;
+            entity.creation_date = model.CreationDate;
+            return entity;
+        }
+
+        private void MapToEntity(ProductionCategoriesUpdateModel model, ProductionCategories entity)
+        {
+            entity.CategoryName = model.CategoryName;
+            entity.description = model.Description;
+            entity.modify_date = model.UpdatedDate;
+            entity.modify_user = model.ModifyUser;
+            entity.creation_date = model.CreatedDate;
         }
 
         public List<ProductionCategoriesModel> GetProductionCategories()
         {
-            return this.Context.ProductionCategories.Select(cc => MapToModel(cc)).ToList();
+            return context.ProductionCategories.Select(category => MapToModel(category)).ToList();
         }
 
         public ProductionCategoriesModel GetProductionCategories(int categoryId)
         {
-            var category = GetCategoryById(categoryId);
+            var category = ValidateCategoryExists(categoryId);
             return MapToModel(category);
         }
 
-        public void RemoveProductionCategories(ProductionCategoriesRemoveModel categoriesRemove)
+        public void RemoveProductionCategories(ProductionCategoriesRemoveModel removeCategories)
         {
-            var categoryToRemove = GetCategoryById(categoriesRemove.CategoryId);
-            UpdateDeletedFields(categoryToRemove, categoriesRemove.Deleted, categoriesRemove.DeleteDate, categoriesRemove.DeleteUser);
-
-            this.Context.ProductionCategories.Remove(categoryToRemove);
-            this.Context.SaveChanges();
+            var category = ValidateCategoryExists(removeCategories.CategoryId);
+            this.context.ProductionCategories.Remove(category);
+            this.context.SaveChanges();
         }
 
-       
-
-        public void SaveProductionCategories(ProductionCategorieAddModel categoriesAdd)
+        public void SaveProductionCategories(ProductionCategorieAddModel saveCategories)
         {
-            var category = new ProductionCategories
-            { 
-                CategoryName = categoriesAdd.CategoryName,
-                description = categoriesAdd.Description,
-                creation_user = categoriesAdd.CreatorUser,
-                creation_date = categoriesAdd.CreationDate
-            };
+            if (saveCategories == null)
+            {
+                throw new ProductionCategoriesServiceException("");
+            }
 
-            this.Context.ProductionCategories.Add(category);
-            this.Context.SaveChanges();
+            var category = MapToEntity(saveCategories);
+            context.ProductionCategories.Add(category);
+            context.SaveChanges();
         }
 
-        public void UpdateProductionCategories(ProductionCategoriesUpdateModel categoriesUpdate)
+        public void UpdateProductionCategories(ProductionCategoriesUpdateModel updateCategories)
         {
-            var categoryToUpdate = GetCategoryById(categoriesUpdate.CategoryId);
-            UpdateCategoryFields(categoryToUpdate, categoriesUpdate.CategoryName, categoriesUpdate.Description, categoriesUpdate.UpdatedDate, categoriesUpdate.ModifyUser, categoriesUpdate.CreatedDate);
+            var category = ValidateCategoryExists(updateCategories.CategoryId);
 
-            this.Context.SaveChanges();
+            if (updateCategories == null)
+            {
+                throw new ProductionCategoriesServiceException("Category no exist");
+            }
+
+            MapToEntity(updateCategories, category);
+            context.ProductionCategories.Update(category);
+            context.SaveChanges();
         }
 
         private void UpdateDeletedFields(ProductionCategories category, bool deleted, DateTime deleteDate, int deleteUser)
@@ -87,17 +107,9 @@ namespace ShopMaMonolitic.Data.DbObjects
             category.deleted = deleted;
             category.delete_date = deleteDate;
             category.delete_user = deleteUser;
+            this.context.SaveChanges();
         }
 
-        private void UpdateCategoryFields(ProductionCategories category, string categoryName, string description, DateTime modifyDate, int modifyUser, DateTime createDate)
-        {
-            
-
-            category.CategoryName = categoryName;
-            category.description = description;
-            category.modify_date = modifyDate;
-            category.modify_user = modifyUser;
-            category.creation_date = createDate;
-        }
+        
     }
 }

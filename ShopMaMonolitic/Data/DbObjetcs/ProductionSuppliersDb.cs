@@ -1,11 +1,15 @@
-﻿using ShopMaMonolitic.Data.Context;
+﻿using ShopMaMonolitic.BL.Exceptions;
+using ShopMaMonolitic.Data.Context;
 using ShopMaMonolitic.Data.Entities;
+using ShopMaMonolitic.Data.Interfaces;
 using ShopMaMonolitic.Data.Models;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace DefaultNamespace
+namespace ShopMaMonolitic.Data.DbObjetcs
 {
-    public class ProductionSuppliersDb : IProductionSuppliers
+    public class ProductionSuppliersDb : IProductionSuppliersDb
     {
         private readonly ShopContext context;
 
@@ -16,14 +20,25 @@ namespace DefaultNamespace
 
         public ShopContext Context => context;
 
-        private ProductionSuppliersModel MapToModel(ProductionSuppliers suppliers)
+        private ProductionSuppliers GetSuppliersById(int suppliersId)
+        {
+            var suppliers = this.Context.ProductionSuppliers.Find(suppliersId);
+            if (suppliers == null)
+            {
+                throw new ProductionSuppliersServicesException("Este Supplier no se encuentra");
+            }
+            return suppliers;
+        }
+
+        private static ProductionSuppliersModel MapToModel(ProductionSuppliers suppliers)
         {
             return new ProductionSuppliersModel
             {
+                SuppliersID = suppliers.supplierID,
                 CompanyName = suppliers.companyName,
                 ContactName = suppliers.contactName,
                 ContactTitle = suppliers.contactTitle,
-                Address = suppliers.adress,
+                Address = suppliers.address,
                 City = suppliers.city,
                 Region = suppliers.region,
                 PostalCode = suppliers.postalcode,
@@ -35,24 +50,33 @@ namespace DefaultNamespace
             };
         }
 
-        private ProductionSuppliers GetSuppliersById(int suppliersId)
+        private ProductionSuppliers MapToEntity(ProductionSuppliersAddModel suppliersAdd)
         {
-            var suppliers = this.Context.ProductionSuppliers.Find(suppliersId);
-            if (suppliers is null)
+            return new ProductionSuppliers
             {
-                throw new NotImplementedException("Este Supplier no se encuentra");
-            }
-            return suppliers;
+                companyName = suppliersAdd.CompanyName,
+                contactName = suppliersAdd.ContactName,
+                contactTitle = suppliersAdd.ContactTitle,
+                address = suppliersAdd.Address,
+                city = suppliersAdd.City,
+                region = suppliersAdd.Region,
+                postalcode = suppliersAdd.PostalCode,
+                country = suppliersAdd.Country,
+                phone = suppliersAdd.Phone,
+                fax = suppliersAdd.Fax,
+                creation_date = suppliersAdd.CreationDate,
+                creation_user = suppliersAdd.CreatorUser,
+            };
         }
 
         public List<ProductionSuppliersModel> GetSuppliers()
         {
-            return this.Context.ProductionSuppliers.Select(cc => MapToModel(cc)).ToList();
+            return this.Context.ProductionSuppliers.Select(suppliers => MapToModel(suppliers)).ToList();
         }
 
-        public ProductionSuppliersModel GetSuppliers(int SuppliersID)
+        public ProductionSuppliersModel GetSuppliers(int suppliersId)
         {
-            var suppliers = GetSuppliersById(SuppliersID);
+            var suppliers = GetSuppliersById(suppliersId);
             return MapToModel(suppliers);
         }
 
@@ -67,21 +91,12 @@ namespace DefaultNamespace
 
         public void SaveSuppliers(ProductionSuppliersAddModel suppliersAdd)
         {
-            var suppliers = new ProductionSuppliers
+            if (suppliersAdd == null)
             {
-                companyName = suppliersAdd.CompanyName,
-                contactName = suppliersAdd.ContactName,
-                contactTitle = suppliersAdd.ContactTitle,
-                city = suppliersAdd.City,
-                region = suppliersAdd.Region,
-                postalcode = suppliersAdd.PostalCode,
-                country = suppliersAdd.Country,
-                phone = suppliersAdd.Phone,
-                fax = suppliersAdd.Fax,
-                creation_date = suppliersAdd.CreationDate,
-                creation_user = suppliersAdd.CreatorUser,
-            };
+                throw new ProductionSuppliersServicesException("Datos de Supplier no válidos");
+            }
 
+            var suppliers = MapToEntity(suppliersAdd);
             this.Context.ProductionSuppliers.Add(suppliers);
             this.Context.SaveChanges();
         }
@@ -89,7 +104,13 @@ namespace DefaultNamespace
         public void UpdateSuppliers(ProductionSuppliersUpdateModel suppliersUpdate)
         {
             var suppliersToUpdate = GetSuppliersById(suppliersUpdate.SupplierId);
-            UpdateSupplierFields(suppliersToUpdate, suppliersUpdate.CompanyName, suppliersUpdate.ContactName, suppliersUpdate.ContactTitle, suppliersUpdate.City, suppliersUpdate.Region, suppliersUpdate.PostalCode, suppliersUpdate.Country, suppliersUpdate.Phone, suppliersUpdate.Fax, suppliersUpdate.ModifyDate, suppliersUpdate.ModifyUser, suppliersToUpdate.creation_date);
+
+            if (suppliersUpdate == null)
+            {
+                throw new ProductionSuppliersServicesException("Datos de Supplier no válidos para actualizar");
+            }
+
+            UpdateSupplierFields(suppliersToUpdate,suppliersToUpdate.address, suppliersUpdate.CompanyName, suppliersUpdate.ContactName, suppliersUpdate.ContactTitle, suppliersUpdate.City, suppliersUpdate.Region, suppliersUpdate.PostalCode, suppliersUpdate.Country, suppliersUpdate.Phone, suppliersUpdate.Fax, suppliersUpdate.ModifyDate, suppliersUpdate.ModifyUser, suppliersToUpdate.creation_date);
 
             this.Context.SaveChanges();
         }
@@ -101,11 +122,12 @@ namespace DefaultNamespace
             suppliers.delete_user = deleteUser;
         }
 
-        private void UpdateSupplierFields(ProductionSuppliers suppliers, string companyName, string contactName, string contactTitle, string city, string region, string postalCode, string country, string phone, string fax, DateTime modifyDate, int modifyUser, DateTime createDate)
+        private void UpdateSupplierFields(ProductionSuppliers suppliers,string address, string companyName, string contactName, string contactTitle, string city, string region, string postalCode, string country, string phone, string fax, DateTime modifyDate, int modifyUser, DateTime createDate)
         {
             suppliers.companyName = companyName;
             suppliers.contactName = contactName;
             suppliers.contactTitle = contactTitle;
+            suppliers.address = address;
             suppliers.city = city;
             suppliers.region = region;
             suppliers.postalcode = postalCode;

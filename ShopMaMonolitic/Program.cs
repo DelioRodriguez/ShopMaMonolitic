@@ -1,8 +1,10 @@
+using DefaultNamespace;
 using Microsoft.EntityFrameworkCore;
 using ShopMaMonolitic.BL.Interfaces;
 using ShopMaMonolitic.BL.Services;
 using ShopMaMonolitic.Data.Context;
 using ShopMaMonolitic.Data.DbObjects;
+using ShopMaMonolitic.Data.DbObjetcs;
 using ShopMaMonolitic.Data.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,8 @@ builder.Services.AddDbContext<ShopContext>(options =>
 
 //Agregar las dependencias del objeto de datos //
 builder.Services.AddScoped<IProductionCategoriesDb, ProductionCategoriesDb>();
+builder.Services.AddScoped<IProductionProductsDb, ProductionProductsDb>();
+builder.Services.AddScoped<IProductionSuppliersDb, ProductionSuppliersDb>();
 
 
 //Agregar las dependencias del BL //
