@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using ShopMaMonolitic.Data.Context;
+using ShopMaMonolitic.Data.DbObjetcs;
+using ShopMaMonolitic.Data.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<ShopContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ShopContext")));
+
+builder.Services.AddScoped<IStatsScoresDb, StatsScoresDb>();
+
+builder.Services.AddScoped<IStatsTestsDb, StatsTestsDb>();
 
 var app = builder.Build();
 

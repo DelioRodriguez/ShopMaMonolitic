@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ShopMaMonolitic",
+    "\\ShopMaMonolitic\\Controllers",
+    "\\ShopMaMonolitic\\Interfaces",
+    "\\ShopMaMonolitic\\Models",
+    "\\ShopMaMonolitic\\Model\\StatsScores",
+    "\\ShopMaMonolitic\\Model\\StatsTest",
+    "\\ShopMaMonolitic\\obj",
+    "\\ShopMaMonolitic\\Properties",
+    "\\ShopMaMonolitic\\Views"
   ],
-  "SelectedNode": "\\C:\\Users\\Nicole\\Source\\Repos\\DelioRodriguez\\ShopMaMonolitic",
+  "SelectedNode": "\\ShopMaMonolitic\\Interfaces\\IStatsTestsDb.cs",
   "PreviewInSolutionExplorer": false
 }

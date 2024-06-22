@@ -11,6 +11,6 @@ public class ShopContext : DbContext
     }
 
     public DbSet<StatsScores> StatsScores { get; set; }
-    public DbSet<StatsTest> StatsTest { get; set; } 
+    public DbSet<StatsTests> StatsTests { get; set; } 
 
 }

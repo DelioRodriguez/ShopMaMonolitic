@@ -2,7 +2,7 @@
 
 namespace ShopMaMonolitic.BL.Services;
 
-public class StatsTestService : IStatsTestService
+public class StatsTestsServices : IStatsTestsServices
 {
     
 }

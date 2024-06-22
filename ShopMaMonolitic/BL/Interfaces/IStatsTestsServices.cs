@@ -1,6 +1,6 @@
 ﻿namespace ShopMaMonolitic.BL.Interfaces;
 
-public class IStatsTestService
+public class IStatsTestsServices
 {
-    
+  
 }

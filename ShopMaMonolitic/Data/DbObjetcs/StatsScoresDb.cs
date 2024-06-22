@@ -2,105 +2,84 @@
 using ShopMaMonolitic.Data.Entities;
 using ShopMaMonolitic.Data.Exceptions;
 using ShopMaMonolitic.Data.Interfaces;
-using ShopMaMonolitic.Data.Models;
+using ShopMaMonolitic.Model.StatsScores;
 
-namespace ShopMaMonolitic.Data.DbObjetcs
+namespace ShopMaMonolitic.Data.DbObjetcs;
+
+public class StatsScoresDb : IStatsScoresDb
 {
-    public class StatsScoresDb :IStatsScoresDb
+    private readonly ShopContext context;
+
+    public StatsScoresDb(ShopContext context)
     {
-        private readonly ShopContext context;
+        this.context = context;
+    }
 
-        public StatsScoresDb(ShopContext context)
+    public ShopContext Context => context;
+
+    public StatsScoresModel MapToModel(StatsScores statsScores)
+    {
+        return new StatsScoresModel
         {
-            this.context = context;
-        }
+            StatsScoresId = statsScores.StatsScoresId,
+            StudentId = statsScores.StudentId
+        };
+    }
 
-        public void DeleteStatsScores(int id)
+    public StatsScores GetStatsScoresById(string statsScoresId)
+    {
+        var statsScores = this.context.StatsScores.Find(statsScoresId);
+        if (statsScores == null)
         {
-            throw new NotImplementedException();
+            throw new StatsScoresException("StatsScores not found");
         }
+        return statsScores;
+    }
 
-        public StatsScoresModel GetStatsScores(int statsScoresId)
+    public StatsScores GetStatsScoresByStudentId(string studentId)
+    {
+        var statsScores = this.context.StatsScores.Find(studentId);
+        if (statsScores == null)
         {
-            var statsScores = this.context.StatsScores.Find(statsScoresId);
-            ArgumentNullException.ThrowIfNull(statsScores, "StatsScores not found");
-
-            StatsScoresModel statsScoresModel = new StatsScoresModel()
-            {
-                StatsScoresId = statsScores.StatsScoresId,
-                StudentId = statsScores.StudentId
-            };
-
-            return statsScoresModel;
+            throw new StatsScoresException("StatsScores not found");
         }
+        return statsScores;
+    }
 
-        public List<StatsScoresModel> GetStatsScores()
-        {
-            return this.context.StatsScores.Select(cd => new StatsScoresModel()
-            {
-                StatsScoresId = cd.StatsScoresId,
-                StudentId = cd.StudentId
-            }).ToList();
-        }
 
-        public StatsScores GetStatsScoresById(int id)
-        {
-            throw new NotImplementedException();
-        }
+    public void AddStatsScores(StatsScores statsScores)
+    {
+        this.context.StatsScores.Add(statsScores);
+        this.context.SaveChanges();
+    }
 
-        public void RemoveStatsScores(StatsScoresRemoveModel statsScoresRemoveModel)
-        {
-            var statsScoresToRemove = this.context.StatsScores.Find(statsScoresRemoveModel.StatscoresID);
-            if (statsScoresToRemove is null)
-            {
-                throw new StatsScoresException("StatsScores not found");
-            }
+    public List<StatsScores> GetStatsScores()
+    {
+        throw new NotImplementedException();
+    }
 
-            this.context.StatsScores.Remove(statsScoresToRemove);
-            this.context.SaveChanges();
+    public List<StatsScores> GetStatsScoresById()
+    {
+        throw new NotImplementedException();
+    }
 
-        }
+    public StatsScores GetStatsScoresById(int id)
+    {
+        throw new NotImplementedException();
+    }
 
-        public void SaveStatsScores(StatsScoresAddModel statsScoresAdd)
-        {
-            StatsScores statsScores = new StatsScores()
-            {
-                StudentId = statsScoresAdd.StudentId!,
-            };
+    public void SaveStatsScores(StatsScores statsScores)
+    {
+        throw new NotImplementedException();
+    }
 
-            this.context.StatsScores.Add(statsScores);
-            this.context.SaveChanges();
-        }
+    public void UpdateStatsScores(StatsScores statsScores)
+    {
+        throw new NotImplementedException();
+    }
 
-        public void SaveStatsScores(StatsScores statsScores)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateStatsScores(StatsScoresUpdateModel statsScoresUpdate)
-        {
-            var statsScoresToUpdate = this.context.StatsScores.Find(statsScoresUpdate.testId);
-
-            if (statsScoresToUpdate is null)
-            {
-                throw new StatsScoresException("This not found");
-
-            }
-
-            statsScoresToUpdate.StudentId = statsScoresUpdate.StudentId!;
-            statsScoresToUpdate.StatsScoresId = statsScoresUpdate.Score;  //Ojo  
-            this.context.StatsScores.Update(statsScoresToUpdate);
-            this.context.SaveChanges();
-        }
-
-        public void UpdateStatsScores(StatsScores statsScores)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<StatsScores> IStatsScoresDb.GetStatsScores()
-        {
-            throw new NotImplementedException();
-        }
+    public void DeleteStatsScores(int id)
+    {
+        throw new NotImplementedException();
     }
 }

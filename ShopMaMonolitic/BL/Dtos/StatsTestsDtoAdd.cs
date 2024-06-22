@@ -1,3 +1,6 @@
 ﻿namespace ShopMaMonolitic.BL.Dtos;
 
-public record StatsTestDtoAdd();
+public interface StatsTestsDtoAdd
+{
+
+}
