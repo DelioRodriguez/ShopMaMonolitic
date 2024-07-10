@@ -1,6 +1,6 @@
 ﻿namespace ShopMaMonolitic.Data.Models
 {
-    public class ProductionCategoriesRemoveModel
+    public class ProductionCategoriesRemoveModel : ProductionCategoriesModel
     {
         public int CategoryId { get; set; }
         public int? Deleteuser { get; set; }

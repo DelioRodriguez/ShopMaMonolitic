@@ -1,15 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ShopMaMonolitic.Data.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
+using ShopMaMonolitic.BL.Interfaces;
 using ShopMaMonolitic.Data.Models;
 
 namespace ShopMaMonolitic.Controllers
 {
     public class ProductionCategoriesController : Controller
     {
-        private readonly IProductionCategoriesDb categoriesService;
+        private readonly IProductionCategoriesService categoriesService;
 
-        public ProductionCategoriesController(IProductionCategoriesDb categoriesService)
+        public ProductionCategoriesController(IProductionCategoriesService categoriesService)
         {
             this.categoriesService = categoriesService;
         }
@@ -17,15 +16,25 @@ namespace ShopMaMonolitic.Controllers
         // GET: CategoriesController
         public ActionResult Index()
         {
-            var categories = categoriesService.GetProductionCategories();
+            var result = this.categoriesService.GetCategories();
+            if (!result.Success)
+            {
+                ViewBag.Message = result.Message;
+            }
+            var categories = (List<ProductionCategoriesModel>)result.Data;
             return View(categories);
         }
 
         // GET: CategoriesController/Details/5
         public ActionResult Details(int id)
         {
-            var category = categoriesService.GetProductionCategories(id);
-            return View(category);
+            var result = categoriesService.GetCategory(id);
+            if (!result.Success)
+            {
+                ViewBag.Message = result.Message;
+            }
+            
+           return View(result);
         }
 
         // GET: CategoriesController/Create
@@ -44,35 +53,49 @@ namespace ShopMaMonolitic.Controllers
                 if (ModelState.IsValid)
                 {
                     categorieAddModel.CreationDate = DateTime.Now;
-                    categorieAddModel.CreatorUser = 1; 
-                    categoriesService.SaveProductionCategories(categorieAddModel);
-                    return RedirectToAction(nameof(Index));
+                    categorieAddModel.CreatorUser = 1;
+                    var result = categoriesService.SaveCategories(categorieAddModel);
+                    if (result.Success)
+                    {
+                        return RedirectToAction(nameof(Index));
+                    }
+                    ModelState.AddModelError("", result.Message);
                 }
                 return View(categorieAddModel);
             }
             catch (Exception ex)
             {
-               
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
                 return View(categorieAddModel);
             }
         }
 
+        // GET: CategoriesController/Edit/5
         public ActionResult Edit(int id)
         {
-            var category = categoriesService.GetProductionCategories(id);
-            var model = new ProductionCategoriesUpdateModel
+            var result = categoriesService.GetCategory(id);
+            if (result.Success)
             {
-                CategoryId = category.CategoryId,
-                CategoryName = category.CategoryName,
-                Description = category.Description,
-                CreatedDate = category.CreateDate,
-                ModifyUser = category.modify_user ?? 1, 
-                UpdatedDate = category.modify_date ?? DateTime.Now,
-            };
-            return View(model);
+                var category = result.Data as ProductionCategoriesModel; // Asegúrate de que el tipo es correcto
+                if (category != null)
+                {
+                    var model = new ProductionCategoriesUpdateModel
+                    {
+                        CategoryId = category.CategoryId,
+                        CategoryName = category.CategoryName,
+                        Description = category.Description,
+                        CreatedDate = category.CreateDate,
+                        ModifyUser = category.modify_user ?? 1,
+                        UpdatedDate = category.modify_date ?? DateTime.Now,
+                    };
+                    return View(model);
+                }
+            }
+            ModelState.AddModelError("", result.Message ?? "Error loading category");
+            return RedirectToAction(nameof(Index));
         }
 
+        // POST: CategoriesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(ProductionCategoriesUpdateModel categoriesUpdate)
@@ -81,16 +104,19 @@ namespace ShopMaMonolitic.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    categoriesUpdate.ModifyUser = 1; 
+                    categoriesUpdate.ModifyUser = 1;
                     categoriesUpdate.UpdatedDate = DateTime.Now;
-                    categoriesService.UpdateProductionCategories(categoriesUpdate);
-                    return RedirectToAction(nameof(Index));
+                    var result = categoriesService.UpdateCategories(categoriesUpdate);
+                    if (result.Success)
+                    {
+                        return RedirectToAction(nameof(Index));
+                    }
+                    ModelState.AddModelError("", result.Message);
                 }
                 return View(categoriesUpdate);
             }
             catch (Exception ex)
             {
-               
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
                 return View(categoriesUpdate);
             }
@@ -99,8 +125,13 @@ namespace ShopMaMonolitic.Controllers
         // GET: ProductionCategories/Delete/5
         public ActionResult Delete(int id)
         {
-            var category = categoriesService.GetProductionCategories(id);
-            return View(category);
+            var result = categoriesService.GetCategory(id);
+            if (result.Success)
+            {
+                return View(result.Data);
+            }
+            ModelState.AddModelError("", result.Message);
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: ProductionCategories/Delete/5
@@ -113,17 +144,22 @@ namespace ShopMaMonolitic.Controllers
                 var categoryToRemove = new ProductionCategoriesRemoveModel
                 {
                     CategoryId = id,
-                    Deleteuser = 1, 
+                    Deleteuser = 1,
                     DeleteDate = DateTime.Now
                 };
-                categoriesService.RemoveProductionCategories(categoryToRemove);
-                return RedirectToAction(nameof(Index));
+                var result = categoriesService.RemoveCategories(categoryToRemove);
+                if (result.Success)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                ModelState.AddModelError("", result.Message);
+                var category = categoriesService.GetCategory(id).Data as ProductionCategoriesModel;
+                return View(category);
             }
             catch (Exception ex)
             {
-                
                 ModelState.AddModelError("", "Unable to delete. Try again, and if the problem persists, see your system administrator.");
-                var category = categoriesService.GetProductionCategories(id);
+                var category = categoriesService.GetCategory(id).Data as ProductionCategoriesModel;
                 return View(category);
             }
         }

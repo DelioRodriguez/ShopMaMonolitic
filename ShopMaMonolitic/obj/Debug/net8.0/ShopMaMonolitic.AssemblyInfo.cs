@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShopMaMonolitic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+844ea4873763b6d248bfda1315ba917a4ab90b63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eed21eed0521a6857126f5be2cfbdea34e751a28")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShopMaMonolitic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShopMaMonolitic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

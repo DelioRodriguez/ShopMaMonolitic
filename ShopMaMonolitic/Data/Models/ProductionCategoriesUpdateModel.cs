@@ -1,6 +1,6 @@
 ﻿namespace ShopMaMonolitic.Data.Models
 {
-    public class ProductionCategoriesUpdateModel
+    public class ProductionCategoriesUpdateModel : ProductionCategoriesModel
     {
         
         public int CategoryId { get; set; }
