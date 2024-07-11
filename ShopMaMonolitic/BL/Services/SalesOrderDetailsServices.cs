@@ -1,4 +1,5 @@
-﻿using ShopMaMonolitic.BL.Interfaces;
+﻿using ShopMaMonolitic.BL.Core;
+using ShopMaMonolitic.BL.Interfaces;
 using ShopMaMonolitic.Data.Interfaces;
 using ShopMaMonolitic.Data.Models;
 
@@ -13,8 +14,28 @@ public class SalesOrderDetailsServices : ISalesOrderDetailsServices
         this.salesOrderDetailsDb = salesOrderDetailsDb;
     }
 
-    public List<SalesOrderDetailsModel> GetSalesOrderDetails()
+    public ServiceResult GetSalesOrderDetails()
     {
-        return salesOrderDetailsDb.GetSalesOrderDetails();
+        throw new NotImplementedException();
+    }
+
+    public ServiceResult GetSalesOrderDetail(int Id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public ServiceResult SaveSalesOrderDetails(SaveSalesOrderDetailsModel saveSalesOrderDetailsModel)
+    {
+        throw new NotImplementedException();
+    }
+
+    public ServiceResult UpdateSalesOrderDetails(UpdateSalesOrderDetailsModel updateSalesOrderDetailsModel)
+    {
+        throw new NotImplementedException();
+    }
+
+    public ServiceResult RemoveSalesOrderDetails(RemoveSalesOrderDetailsModel removeSalesOrderDetailsModel)
+    {
+        throw new NotImplementedException();
     }
 }
